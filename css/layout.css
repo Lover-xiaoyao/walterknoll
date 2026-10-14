@@ -1,0 +1,284 @@
+/* ================================================================
+   layout.css —— 【布局层】所有页面都要引入
+   ----------------------------------------------------------------
+   放"决定页面骨架怎么排"的东西：
+     1. 容器宽度
+     2. 顶部导航
+     3. 底部页脚
+     4. 手机抽屉菜单
+     5. 响应式断点（公共部分）
+
+   真站数值（1440px 视口实测）：
+     内容宽 1352px（左右各留 44px）｜顶栏 64px（手机 48px）
+   ================================================================ */
+
+
+/* ================================================================
+   1. 容器
+   ================================================================ */
+/* 页面通用容器：限宽 + 左右留白
+   实测：1440px 视口下真站内容宽 = 1352px，左右各留 44px */
+.container {
+  max-width: 1440px;      /* 1440 - 44×2 = 1352，与真站一致 */
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+
+/* ================================================================
+   1.5 内页主内容（pages/ 里的 9 个页面用，首页不用）
+   ================================================================ */
+/* 内页顶栏是 fixed 的（不占文档流），主内容要往下让出顶栏高度，
+   否则标题会被顶栏压住 —— 这是新人最容易踩的坑 */
+.page-main {
+  padding-top: calc(var(--header-h) + 72px);
+  padding-bottom: 96px;
+}
+
+/* 页面标题区（每个内页开头的大标题 + 一句话说明） */
+.page-head { margin-bottom: 48px; }
+.page-head h1 {
+  font-size: 56px;        /* 真站 h2 = 56px，内页标题用这一档 */
+  line-height: 64px;
+  margin-bottom: 16px;
+}
+
+
+/* ================================================================
+   2. 顶部导航 —— 真站：fixed 固定，高 64px，细线分隔，滚动后变白
+   ================================================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-h);
+  z-index: 998;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  color: var(--black);
+  transition: background .25s ease-out, color .25s ease-out;
+}
+
+.site-header .header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--pad);
+}
+
+/* --- logo（黑白两版切换） --- */
+.site-header .logo {
+  flex-shrink: 0;         /* 别被挤扁 */
+  display: block;
+}
+.site-header .logo img { height: 15px; width: auto; }   /* 真站 logo 154×15 */
+.site-header .logo .logo-black { display: block; }
+.site-header .logo .logo-white { display: none; }
+
+/* --- 一级菜单 --- */
+.site-header .nav {
+  margin-left: auto;      /* 把菜单推到右边 */
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.site-header .nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 14px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: .02em;
+  cursor: pointer;
+}
+/* 当前页高亮 + 鼠标移上去：底部出现 2px 黑线（真站就是这个效果） */
+.site-header .nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background: var(--black);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+.site-header .nav-item:hover::after,
+.site-header .nav-item.is-active::after { opacity: 1; }
+
+/* --- 右侧工具区（语言 / 搜索 / 汉堡） --- */
+.site-header .header-tools {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 20px;
+  border-left: 1px solid var(--line);   /* 真站：菜单和工具区之间有竖线 */
+  padding-left: 20px;
+}
+.site-header .tool-btn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 300;
+}
+.site-header .tool-btn svg { width: 20px; height: 20px; }   /* 真站图标 20×20 */
+
+/* 汉堡按钮：只在手机上出现 */
+.site-header .nav-toggle { display: none; }
+
+/* --- 首页专用：压在 hero 大图上，透明 + 白字 --- */
+.site-header.on-hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, .32) 57.51%, transparent);
+  border-bottom: 1px solid hsla(0, 0%, 100%, .4);
+  color: var(--white);
+}
+.site-header.on-hero .logo .logo-black { display: none; }
+.site-header.on-hero .logo .logo-white { display: block; }
+.site-header.on-hero .nav-item::after { background: var(--white); }
+
+/* 滚动超过一屏后，即使首页也变回白底黑字（JS 加 .is-scrolled） */
+.site-header.is-scrolled {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  color: var(--black);
+}
+.site-header.is-scrolled .logo .logo-black { display: block; }
+.site-header.is-scrolled .logo .logo-white { display: none; }
+.site-header.is-scrolled .nav-item::after { background: var(--black); }
+
+
+/* ================================================================
+   3. 底部页脚 —— 真站结构：logo + 5 组链接 + 底部法律行
+   ================================================================ */
+.site-footer {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  padding: 64px var(--pad) 40px;
+}
+.site-footer .footer-logo { margin-bottom: 56px; }
+.site-footer .footer-logo img { height: 15px; }
+
+.site-footer .footer-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);   /* 桌面 5 列 */
+  gap: 32px;
+}
+
+.site-footer .footer-title {
+  font-size: 14px;
+  font-weight: 500;        /* 真站标题 weight 500 */
+  line-height: 20px;
+  margin-bottom: 32px;     /* 真站 margin-bottom:32px */
+}
+.site-footer .footer-list li { margin-bottom: 12px; }
+.site-footer .footer-list a {
+  font-size: 14px;
+  font-weight: 300;        /* 真站链接 lighter */
+  line-height: 20px;
+}
+.site-footer .footer-list a:hover { text-decoration: underline; }
+
+.site-footer .footer-bottom {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+/* ================================================================
+   4. 手机侧边抽屉菜单（汉堡点开后的）—— 由 js/common.js 控制
+   ================================================================ */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  z-index: 999;
+  padding: 80px var(--pad) 40px;
+  overflow-y: auto;
+  transform: translateX(-100%);    /* 默认藏在屏幕外 */
+  transition: transform .3s ease-out;
+}
+.drawer.is-open { transform: translateX(0); }
+.drawer .drawer-item {
+  display: block;
+  font-size: 16px;      /* 真站抽屉链接 16px / 行高 32 */
+  line-height: 32px;
+  font-weight: 300;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.drawer .drawer-close {
+  position: absolute;
+  top: 20px;
+  right: var(--pad);
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* 回到顶部按钮（js/common.js 里控制显隐） */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  color: var(--white);
+  font-size: 18px;
+  z-index: 900;
+  cursor: pointer;
+}
+.back-to-top.is-visible { display: flex; }
+
+
+/* ================================================================
+   5. 响应式断点（公共部分）
+      断点与真站一致：1700 / 1199 / 859 / 479
+   ================================================================ */
+
+/* 超大屏 ≥1700px —— 留白更大 */
+@media (min-width: 1700px) {
+  :root { --pad: 62px; }
+  .container { max-width: 1699px; }
+}
+
+/* ≤1199px —— 小笔记本 / 平板横屏 */
+@media (max-width: 1199px) {
+  :root { --pad: 32px; }
+  .site-header .nav-item { padding: 0 10px; }   /* 菜单间距收窄，避免挤爆 */
+}
+
+/* ≤859px —— 平板竖屏 / 大手机：横向菜单收进汉堡按钮 */
+@media (max-width: 859px) {
+  :root { --pad: 24px; }
+
+  .site-header .nav { display: none; }          /* 隐藏横向菜单 */
+  .site-header .nav-toggle { display: flex; }   /* 显示汉堡按钮 */
+
+  .site-footer .footer-links { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ≤479px —— 手机 */
+@media (max-width: 479px) {
+  :root { --pad: 20px; --header-h: 48px; }      /* 真站手机顶栏 48px */
+
+  .site-footer .footer-links { grid-template-columns: repeat(2, 1fr); }
+  .site-footer .footer-list a,
+  .site-footer .footer-title { font-size: 11px; line-height: 16px; }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Walter Knoll — Products</title>
+
+  <!-- 样式四层，顺序不能乱 -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/products.css">
+</head>
+<body>
+
+  <!-- ===== 公共导航 =====
+       与 js/components/header.html 一致
+       ⚠️ 内页【不要】加 on-hero（那是首页专用的） -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a class="logo" href="../index.html" aria-label="Walter Knoll">
+      <img class="logo-black" src="../assets/images/common/logo-black.svg" alt="Walter Knoll">
+      <img class="logo-white" src="../assets/images/common/logo-white.svg" alt="Walter Knoll">
+    </a>
+
+    <!-- 导航项与真站一致（真站首页一级栏目就是这 10 个） -->
+    <nav class="nav">
+      <a class="nav-item" href="products.html">Products</a>
+      <a class="nav-item" href="materials.html">Material Library</a>
+      <a class="nav-item" href="magazine.html">Magazine</a>
+      <a class="nav-item" href="#">Designers</a>
+      <a class="nav-item" href="professionals.html">Professionals</a>
+      <a class="nav-item" href="about.html">About us</a>
+      <a class="nav-item" href="sustainability.html">Sustainability</a>
+      <a class="nav-item" href="contact.html">Retailers</a>
+      <a class="nav-item" href="#">Downloads</a>
+      <a class="nav-item" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-tools">
+      <span class="tool-btn">EN</span>
+      <button class="tool-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path>
+        </svg>
+      </button>
+      <button class="tool-btn nav-toggle" id="navToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- 手机端抽屉菜单（跟着上面那段一起复制） -->
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Close">&times;</button>
+  <a class="drawer-item" href="products.html">Products</a>
+  <a class="drawer-item" href="materials.html">Material Library</a>
+  <a class="drawer-item" href="magazine.html">Magazine</a>
+  <a class="drawer-item" href="#">Designers</a>
+  <a class="drawer-item" href="professionals.html">Professionals</a>
+  <a class="drawer-item" href="about.html">About us</a>
+  <a class="drawer-item" href="sustainability.html">Sustainability</a>
+  <a class="drawer-item" href="contact.html">Retailers</a>
+  <a class="drawer-item" href="#">Downloads</a>
+  <a class="drawer-item" href="contact.html">Contact</a>
+</div>
+
+  <!-- ============================================================
+       本页主内容 —— 【成员 B】负责
+       把 <main> 里的东西换成这一页要做的模块
+       ============================================================ -->
+  <main class="page-main">
+
+    <!-- 页面标题区（可以保留，也可以改） -->
+    <section class="page-head container">
+      <h1>Products</h1>
+      <p class="desc">本页由【成员 B】负责。把 &lt;main&gt; 里的内容换成这一页的模块。</p>
+    </section>
+
+    <!-- ↓↓↓ 你的内容写在这里 ↓↓↓ -->
+
+
+    <!-- ↑↑↑ 你的内容写在这里 ↑↑↑ -->
+
+  </main>
+
+  <!-- ===== 公共页脚 =====
+       与 js/components/footer.html 一致 -->
+<footer class="site-footer">
+  <div class="footer-logo">
+    <img src="../assets/images/common/logo-black.svg" alt="Walter Knoll">
+  </div>
+
+  <div class="footer-links">
+
+    <div>
+      <p class="footer-title">Products</p>
+      <ul class="footer-list">
+        <li><a href="#">Chairs &amp; Barstools</a></li>
+        <li><a href="#">Lounge Chairs</a></li>
+        <li><a href="#">Sofas &amp; Benches</a></li>
+        <li><a href="#">Tables</a></li>
+        <li><a href="#">Executive Desks</a></li>
+        <li><a href="#">Media Integration</a></li>
+        <li><a href="#">Storage</a></li>
+        <li><a href="#">Carpets &amp; Carpet Pillows</a></li>
+        <li><a href="#">Accessories &amp; Stools</a></li>
+        <li><a href="#">Beds</a></li>
+        <li><a href="#">Exhibition pieces</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-title">Material Library</p>
+      <ul class="footer-list">
+        <li><a href="#">Inspiration</a></li>
+        <li><a href="#">Leathers</a></li>
+        <li><a href="#">Fabrics</a></li>
+        <li><a href="#">Graded-In fabrics</a></li>
+        <li><a href="#">Woods</a></li>
+        <li><a href="#">Stones</a></li>
+        <li><a href="#">Other surfaces</a></li>
+        <li><a href="#">Materials in use</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-title">About us</p>
+      <ul class="footer-list">
+        <li><a href="about.html">Our Purpose</a></li>
+        <li><a href="#">Our History</a></li>
+        <li><a href="#">Showrooms</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-title">Professionals</p>
+      <ul class="footer-list">
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Campus of Competence</a></li>
+        <li><a href="#">Showrooms</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">pCon Tools</a></li>
+        <li><a href="#">Content Kits</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-title">Magazine</p>
+      <ul class="footer-list">
+        <li><a href="magazine.html">All Topics</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">References</a></li>
+        <li><a href="#">#WalterKnoll</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <a href="#">Imprint</a>
+    <a href="#">Terms &amp; Conditions</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Cookies</a>
+  </div>
+</footer>
+
+  <!-- 脚本：数据封装 → 公共逻辑 → 本页逻辑 -->
+  <script src="../js/api.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/pages/products.js"></script>
+</body>
+</html>

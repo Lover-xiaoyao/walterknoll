@@ -1,0 +1,83 @@
+<!-- ============================================================
+     公共组件：顶部导航 + 手机抽屉菜单
+     ------------------------------------------------------------
+     ⚠️ 本文件是「根目录版」——路径按 index.html 的位置写，
+        可以直接整段复制进根目录的 index.html。
+
+     复制到 pages/ 里的 9 个页面时，要做 3 处替换：
+       1.  src="assets/...              →  src="../assets/...
+       2.  href="pages/xxx.html         →  href="xxx.html"
+       3.  href="index.html（logo）      →  href="../index.html"
+       （自动生成的那 9 个骨架已经替你们改好了，不用手动改）
+
+     ------------------------------------------------------------
+     两种用法（全组选一种，别混着来）：
+
+     【用法一 · 复制粘贴】← 推荐，双击就能看效果
+       每个页面把下面这整段复制到 <body> 最前面。
+
+     【用法二 · JS 动态注入】← 需要起本地服务器（见 README）
+       页面里只留 <div id="site-header"></div>，
+       js/common.js 会自动把本文件 fetch 进来，10 个页面只维护这一份。
+
+     ⚠️ 首页（index.html）的 header 要多加 on-hero 类：
+          <header class="site-header on-hero" id="siteHeader">
+        因为首页顶上是张大图，顶栏要透明压上去；
+        pages/ 里的内页是白底顶栏，不能加 on-hero。
+
+     改导航 → 只改这个文件 → 再同步到 10 个页面
+     ============================================================ -->
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a class="logo" href="index.html" aria-label="Walter Knoll">
+      <img class="logo-black" src="assets/images/common/logo-black.svg" alt="Walter Knoll">
+      <img class="logo-white" src="assets/images/common/logo-white.svg" alt="Walter Knoll">
+    </a>
+
+    <!-- 导航项与真站一致（真站首页一级栏目就是这 10 个） -->
+    <nav class="nav">
+      <a class="nav-item" href="pages/products.html">Products</a>
+      <a class="nav-item" href="pages/materials.html">Material Library</a>
+      <a class="nav-item" href="pages/magazine.html">Magazine</a>
+      <a class="nav-item" href="#">Designers</a>
+      <a class="nav-item" href="pages/professionals.html">Professionals</a>
+      <a class="nav-item" href="pages/about.html">About us</a>
+      <a class="nav-item" href="pages/sustainability.html">Sustainability</a>
+      <a class="nav-item" href="pages/contact.html">Retailers</a>
+      <a class="nav-item" href="#">Downloads</a>
+      <a class="nav-item" href="pages/contact.html">Contact</a>
+    </nav>
+
+    <div class="header-tools">
+      <span class="tool-btn">EN</span>
+      <button class="tool-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path>
+        </svg>
+      </button>
+      <button class="tool-btn nav-toggle" id="navToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- 手机端抽屉菜单（跟着上面那段一起复制） -->
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Close">&times;</button>
+  <a class="drawer-item" href="pages/products.html">Products</a>
+  <a class="drawer-item" href="pages/materials.html">Material Library</a>
+  <a class="drawer-item" href="pages/magazine.html">Magazine</a>
+  <a class="drawer-item" href="#">Designers</a>
+  <a class="drawer-item" href="pages/professionals.html">Professionals</a>
+  <a class="drawer-item" href="pages/about.html">About us</a>
+  <a class="drawer-item" href="pages/sustainability.html">Sustainability</a>
+  <a class="drawer-item" href="pages/contact.html">Retailers</a>
+  <a class="drawer-item" href="#">Downloads</a>
+  <a class="drawer-item" href="pages/contact.html">Contact</a>
+</div>

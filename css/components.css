@@ -1,0 +1,145 @@
+/* ================================================================
+   components.css —— 【组件层】所有页面都要引入
+   ----------------------------------------------------------------
+   放"能被多个页面重复使用"的小零件。已经有：
+     1. 箭头链接 .cta          2. 区块标题行 .section-head
+     3. 卡片 .card             4. 按钮 .btn
+
+   下面几个是给后面页面预备的骨架（要用的时候直接填内容，别另起炉灶）：
+     5. 面包屑 .breadcrumb     6. 分页器 .pagination     7. 标签页 .tabs
+   ================================================================ */
+
+
+/* ================================================================
+   1. 箭头链接（真站叫 Cta：14px 文字 + 24px 箭头）
+   ================================================================ */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+}
+.cta .arrow {
+  font-size: 18px;
+  transition: transform .3s ease-out;   /* 鼠标移上去箭头往右滑一点 */
+}
+.cta:hover .arrow { transform: translateX(4px); }
+.cta-white { color: var(--white); }
+
+
+/* ================================================================
+   2. 区块标题行（左标题 + 右链接，如首页 Magazine 那一行）
+   ================================================================ */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+
+/* ================================================================
+   3. 卡片（图片 + 小标签 + 标题，首页 Magazine 和三卡页面都用它）
+   ================================================================ */
+.card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;                  /* 真站卡片图比例 3:2 */
+  object-fit: cover;
+  margin-bottom: 18px;                  /* 真站 margin-bottom:18px */
+}
+.card-tag {
+  font-size: 14px;                      /* 真站小标签 14px / 20 */
+  line-height: 20px;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+.card h4 {
+  font-size: 28px;                      /* 真站 h4 = 28px */
+  line-height: 36px;
+}
+
+
+/* ================================================================
+   4. 按钮
+   ================================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid var(--black);
+  background: transparent;
+  color: var(--black);
+}
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+
+/* ================================================================
+   5-7. 以下给后面页面预备（用到了再把内容填进去，不要另起炉灶）
+   ================================================================ */
+
+/* 面包屑：Home / Products / Chairs & Barstools  —— 成员 B 的 products-chairs 页要用 */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--gray-700);
+  margin-bottom: 24px;
+}
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* 分页器：上一页 / 1 2 3 / 下一页  —— 成员 B 的 products-chairs 页要用 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 48px;
+  font-size: 14px;
+}
+.pagination a {
+  min-width: 36px;
+  padding: 8px 10px;
+  text-align: center;
+  border: 1px solid var(--line);
+}
+.pagination .is-current {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+/* 标签页切换：All Topics / News / Stories / References  —— 成员 D 的 magazine 页要用 */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 32px;
+}
+.tabs .tab {
+  position: relative;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.tabs .tab.is-active { font-weight: 500; }
+.tabs .tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background: var(--black);
+}
