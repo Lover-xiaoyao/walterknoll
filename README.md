@@ -2,6 +2,8 @@
 
 按 [Walter Knoll 英文官网](https://www.walterknoll.info/en) 与用户提供的十页分工表完成的响应式教学复刻。采用 **原生 HTML、CSS、JavaScript**，保留指定目录结构，旧 `runoob-ui-lab` 项目不受影响。
 
+详细的项目介绍、A 至 E 成员职责、页面功能、代码入口和验收方法见 [项目说明](docs/project-overview.md)。
+
 ![Desktop homepage](docs/previews/home-desktop.jpg)
 
 ## 启动
