@@ -60,3 +60,11 @@ GitHub Actions 已配置相同检查流程。远端 CI 状态另看仓库 Action
 保留并静态化：所有可见控件保留原样并标 `aria-disabled="true"`（筛选下拉与输入框、分类按钮、加载更多、分页按钮、材料九张卡、15 个皮革色卡、轮播圆点与暂停、搜索与心愿单图标、页脚回到顶部、联系表单的提交按钮改成 `type="button"`）；桌面/手机布局、配色、排版完全未改。
 
 验证：`npm run check` **PASS**（10 页、313 个本地链接/资源、共享片段、锚点、JS 语法）；`npm test` **27/27 通过**，其中新增三条针对本次范围的断言——① 全站只剩 `#menuDialog` 一个 `dialog`；② 十个页面里所有交互钩子计数为 0（只允许抽屉开关 1 个）；③ 逐页抽样点击正文、页头、页脚的失效控件，URL 与滚动位置都不许变化，并检查除主导航/logo/面包屑/内页锚点/`.txt` 下载/外链之外没有指向 `.html` 的链接。测试过程中抓出并修掉两个真问题：产品页 9 张分类图块原本是同页筛选链接（点了会重载页面），已改为死链；`.txt` 下载属于资料而非页面跳转，测试规则相应放宽。未验证：GitHub Actions 远端结果与 Safari/Firefox。
+
+## 死链改为完全惰性（2026-10-14 追加）
+
+问题：上一轮给死链加了 `cursor: not-allowed`，鼠标移到卡片图片上会出现"禁止"光标，静态模板看起来像坏了。
+
+改动：`css/components.css` 里把该规则换成 `[aria-disabled=true], [aria-disabled=true] * { pointer-events: none }`——鼠标指针保持页面默认、hover 不再触发任何颜色变化、点击落到下层元素因此不会跳转。`href="#"` 与 `aria-disabled="true"` 保留，`js/common.js` 的 `preventDefault` 守卫也保留（键盘回车等情况）。
+
+验证：`npm run check` **PASS**；`npm test` **28/28 通过**。新增断言 `dead controls show no cursor or hover feedback`：检查计算出的 `pointer-events` 为 `none`、`document.elementFromPoint` 在卡片中心命中的不是死链（光标因此不是 `not-allowed`）、以及鼠标移上去之后文字颜色不变。

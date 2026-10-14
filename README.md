@@ -32,7 +32,7 @@ npm run dev
 | E    | `pages/sustainability.html`     | 来源明确的统计、图文、原则与 Evo Concept                      |
 | E    | `pages/contact.html`            | 六个门店、城市搜索、地图链接、联系表单演示                    |
 
-这是一个**展示用的静态 UI 模板**：十页只用来呈现界面，不做交互。全站唯一的跳转是顶部主导航（Products、Material Library、Magazine、Designers、Professionals、About us、Sustainability，手机上是同一个导航的抽屉）和 logo；正文的卡片、图块、按钮、列表项一律是死链（`href="#"` + `aria-disabled="true"`，光标 `not-allowed`，点了不跳页也不滚顶），筛选、分页、Tab、色卡、表单等控件只是界面元素，`aria-disabled="true"` 标出"点了不会有反应"。`js/common.js` 只做三件事：给当前主导航加 `aria-current`、开合手机导航抽屉、拦住死链的默认跳转；产品页和杂志页各有一个脚本，只负责把列表渲染出来。
+这是一个**展示用的静态 UI 模板**：十页只用来呈现界面，不做交互。全站唯一的跳转是顶部主导航（Products、Material Library、Magazine、Designers、Professionals、About us、Sustainability，手机上是同一个导航的抽屉）和 logo；正文的卡片、图块、按钮、列表项一律是空链接（`href="#"` + `aria-disabled="true"`），鼠标指针不变、hover 不变色、点了不跳页也不滚顶。筛选、分页、Tab、色卡、表单等控件同样只是界面元素：`aria-disabled="true"` 表示"点了不会有反应"，并由 `pointer-events: none` 彻底惰性化。`js/common.js` 只做三件事：给当前主导航加 `aria-current`、开合手机导航抽屉、拦住死链的默认跳转；产品页和杂志页各有一个脚本，只负责把列表渲染出来。
 
 **十页范围**：全站只有上表十个 HTML 页面（`index.html` 与 `pages/` 下九个；`js/components/*.html` 是公共片段，不是页面）。列表内容在页面里完整呈现，不靠翻页或加载更多隐藏：产品总览 12 条、座椅页 9 条（分页条只作为界面元素）、杂志 9 条、门店 6 家。
 
