@@ -11,5 +11,7 @@
     "test": "node scripts/browser-test.mjs",
     "capture:reference": "node scripts/capture-reference.mjs"
   },
-  "devDependencies": { "playwright": "1.55.0" }
+  "devDependencies": {
+    "playwright": "1.55.0"
+  }
 }

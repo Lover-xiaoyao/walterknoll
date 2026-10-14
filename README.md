@@ -19,20 +19,24 @@ npm run dev
 
 ## 十个页面与分工
 
-| 分工 | 页面 | 内容 |
-| --- | --- | --- |
-| A | `index.html` | 六张 Hero 轮播、产品推荐、Magazine、Worldwide/About、订阅演示 |
-| A | `pages/about.html` | Purpose、历史时间轴、设计师、门店入口 |
-| B | `pages/products.html` | 分类图片、分类/设计师/关键词筛选、加载更多、产品预览 |
-| B | `pages/products-chairs.html` | 35 款座椅、9 款/页、分页与筛选 |
-| C | `pages/materials.html` | 九个材料入口、悬停效果、材料预览、FAQ |
-| C | `pages/materials-leathers.html` | Elen 大图、材料说明、15 款真实纹理色卡 |
-| D | `pages/magazine.html` | All Topics / News / Stories / References、文章列表与预览 |
-| D | `pages/professionals.html` | 八项服务、可下载的项目参考文件、官方资源入口 |
-| E | `pages/sustainability.html` | 来源明确的统计、图文、原则与 Evo Concept |
-| E | `pages/contact.html` | 六个门店、城市搜索、地图链接、联系表单演示 |
+| 分工 | 页面                            | 内容                                                          |
+| ---- | ------------------------------- | ------------------------------------------------------------- |
+| A    | `index.html`                    | 六张 Hero 轮播、产品推荐、Magazine、Worldwide/About、订阅演示 |
+| A    | `pages/about.html`              | Purpose、历史时间轴、设计师、门店入口                         |
+| B    | `pages/products.html`           | 分类图片、分类/设计师/关键词筛选、加载更多、产品预览          |
+| B    | `pages/products-chairs.html`    | 35 款座椅、9 款/页、分页与筛选                                |
+| C    | `pages/materials.html`          | 九个材料入口、悬停效果、材料预览、FAQ                         |
+| C    | `pages/materials-leathers.html` | Elen 大图、材料说明、15 款真实纹理色卡                        |
+| D    | `pages/magazine.html`           | All Topics / News / Stories / References、文章列表与预览      |
+| D    | `pages/professionals.html`      | 八项服务、可下载的项目参考文件、官方资源入口                  |
+| E    | `pages/sustainability.html`     | 来源明确的统计、图文、原则与 Evo Concept                      |
+| E    | `pages/contact.html`            | 六个门店、城市搜索、地图链接、联系表单演示                    |
 
 共享功能包括移动端菜单、跨页面搜索、产品心愿单、键盘操作、回到顶部。心愿单保存在当前浏览器；联系与订阅表单只验证输入并显示演示结果，不发送或保存个人信息。
+
+**十页范围**：全站只有上表十个 HTML 页面（`index.html` 与 `pages/` 下九个；`js/components/*.html` 是公共片段，不是页面）。页面正文里的卡片、图块、按钮、列表项一律不打开新的页面：产品、文章、材料详情用公共弹窗（`#detailDialog`）在当前页展示，其余正文卡片为死链（`href="#"` + `aria-disabled="true"`，光标为 `not-allowed`，点击只弹提示）。保留跳转的只有顶部导航、移动端抽屉、页脚、面包屑、同页锚点与同页筛选（如 `products.html?category=tables#collection`）、搜索弹窗结果和指向官网页面的来源链接。
+
+**视觉与交互范围**：全站零依赖，只有原生 HTML/CSS/JS——没有动画库、没有 `@keyframes`、没有渐变、阴影、毛玻璃，也没有视差、3D 翻转或鼠标跟随。hover 只做颜色/背景变化加 `.2s` 过渡；箭头不再位移、卡片图片不再悬停放大，回到顶部与锚点滚动都是直接跳转。选择器只用标签、类、后代/子代，以及状态需要的属性选择器（`[aria-pressed]`、`[aria-current]`、`[data-*]`），不使用 `:not()` 和 `:has()`。CSS 变量只有 `:root` 里一层平铺的 11 个（配色、字体、间距），没有变量套变量。
 
 产品索引有 60 条分类记录（59 个不同产品，Management-X 跨分类）；总览展示十个目前官网返回的产品分类。杂志保留九篇有官方来源的文章入口。产品与文章弹窗提供简介入口，完整产品规格和文章在原官网查看。
 
@@ -71,7 +75,7 @@ npx playwright install chromium
 npm test
 ```
 
-- `check`：十页数量、共享片段一致性、内部链接、锚点、图片与 JavaScript 语法。
+- `check`：十页数量、共享片段一致性（比较标记内容，忽略缩进与换行差异）、内部链接、锚点、图片与 JavaScript 语法。
 - `test`：自动启动独立测试服务器，检查十页桌面/手机布局和主要交互；完成后自动停止测试服务器。
 - 报告与完整截图在 `artifacts/verification/`，不把临时测试产物加入 Git。
 - `npm run capture:reference`：采集指定官网页面截图与字体/尺寸观察，保存到 `artifacts/reference/`。

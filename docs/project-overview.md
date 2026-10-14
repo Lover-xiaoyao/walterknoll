@@ -4,18 +4,18 @@
 
 本说明用于项目交接、成员协作和课程演示。A 至 E 为成员分工代号，团队可补充实际姓名。下面列出的内容表示模块职责，实际提交记录以 Git 历史为准。
 
-| 项目 | 说明 |
-| --- | --- |
-| 项目名称 | Walter Knoll 网站复刻 |
-| 参考网站 | [Walter Knoll 英文官网](https://www.walterknoll.info/en) |
-| 代码仓库 | [railway02/walterknoll](https://github.com/railway02/walterknoll) |
-| 页面语言 | 英文 |
-| 文档语言 | 中文 |
-| 团队规模 | 5 人，每人负责 2 个页面 |
-| 技术方案 | 原生 HTML、CSS、JavaScript 和本地 JSON 数据 |
-| 默认访问地址 | `http://localhost:4173` |
-| 当前交付 | 10 个页面、交互脚本、本地素材、测试与项目文档 |
-| 文档更新日期 | 2026 年 10 月 14 日 |
+| 项目         | 说明                                                              |
+| ------------ | ----------------------------------------------------------------- |
+| 项目名称     | Walter Knoll 网站复刻                                             |
+| 参考网站     | [Walter Knoll 英文官网](https://www.walterknoll.info/en)          |
+| 代码仓库     | [railway02/walterknoll](https://github.com/railway02/walterknoll) |
+| 页面语言     | 英文                                                              |
+| 文档语言     | 中文                                                              |
+| 团队规模     | 5 人，每人负责 2 个页面                                           |
+| 技术方案     | 原生 HTML、CSS、JavaScript 和本地 JSON 数据                       |
+| 默认访问地址 | `http://localhost:4173`                                           |
+| 当前交付     | 10 个页面、交互脚本、本地素材、测试与项目文档                     |
+| 文档更新日期 | 2026 年 10 月 14 日                                               |
 
 ## 目录
 
@@ -101,30 +101,30 @@ npm run dev
 
 ### 常用命令
 
-| 命令 | 用途 |
-| --- | --- |
-| `npm run dev` | 启动本地静态服务器 |
-| `npm run sync:components` | 将公共导航和页脚同步到 10 个页面 |
-| `npm run check` | 检查内部链接、资源、锚点和脚本语法 |
-| `npm test` | 启动测试服务器，执行浏览器检查 |
-| `npm run capture:reference` | 采集指定官网页面的截图和布局观察 |
+| 命令                        | 用途                               |
+| --------------------------- | ---------------------------------- |
+| `npm run dev`               | 启动本地静态服务器                 |
+| `npm run sync:components`   | 将公共导航和页脚同步到 10 个页面   |
+| `npm run check`             | 检查内部链接、资源、锚点和脚本语法 |
+| `npm test`                  | 启动测试服务器，执行浏览器检查     |
+| `npm run capture:reference` | 采集指定官网页面的截图和布局观察   |
 
 页面使用 JavaScript 模块和本地数据请求。请通过 HTTP 地址访问，直接双击 HTML 文件的 `file://` 模式不适用于本项目。
 
 ## 页面结构与访问路径
 
-| 成员 | 页面 | 相对访问路径 | 主要功能 |
-| --- | --- | --- | --- |
-| A | 首页 | `/index.html` | 轮播、产品推荐、杂志入口、品牌介绍、订阅演示 |
-| A | 关于我们 | `/pages/about.html` | 品牌介绍、历史时间轴、设计师和门店入口 |
-| B | 产品总览 | `/pages/products.html` | 分类入口、组合筛选、加载更多、产品预览 |
-| B | 产品子类 | `/pages/products-chairs.html` | 座椅网格、面包屑、筛选和分页 |
-| C | 材料库 | `/pages/materials.html` | 9 个材料入口、悬停效果、预览和常见问题 |
-| C | 皮革详情 | `/pages/materials-leathers.html` | 材料说明、大图、15 款色卡和相关材料 |
-| D | 杂志列表 | `/pages/magazine.html` | 分类标签页、文章列表和文章预览 |
-| D | 专业服务 | `/pages/professionals.html` | 8 项服务、下载列表和官方资源入口 |
-| E | 可持续发展 | `/pages/sustainability.html` | 统计、图文说明、原则和证书入口 |
-| E | 门店与联系 | `/pages/contact.html` | 6 个门店、搜索、地图链接和联系表单 |
+| 成员 | 页面       | 相对访问路径                     | 主要功能                                     |
+| ---- | ---------- | -------------------------------- | -------------------------------------------- |
+| A    | 首页       | `/index.html`                    | 轮播、产品推荐、杂志入口、品牌介绍、订阅演示 |
+| A    | 关于我们   | `/pages/about.html`              | 品牌介绍、历史时间轴、设计师和门店入口       |
+| B    | 产品总览   | `/pages/products.html`           | 分类入口、组合筛选、加载更多、产品预览       |
+| B    | 产品子类   | `/pages/products-chairs.html`    | 座椅网格、面包屑、筛选和分页                 |
+| C    | 材料库     | `/pages/materials.html`          | 9 个材料入口、悬停效果、预览和常见问题       |
+| C    | 皮革详情   | `/pages/materials-leathers.html` | 材料说明、大图、15 款色卡和相关材料          |
+| D    | 杂志列表   | `/pages/magazine.html`           | 分类标签页、文章列表和文章预览               |
+| D    | 专业服务   | `/pages/professionals.html`      | 8 项服务、下载列表和官方资源入口             |
+| E    | 可持续发展 | `/pages/sustainability.html`     | 统计、图文说明、原则和证书入口               |
+| E    | 门店与联系 | `/pages/contact.html`            | 6 个门店、搜索、地图链接和联系表单           |
 
 首页是主要入口。产品页连接座椅子类，材料库连接皮革详情。导航中的 Designers（设计师）指向关于页的设计师区。Retailers（门店）和 Contact（联系）分别指向联系页的对应区块。
 
@@ -146,14 +146,14 @@ flowchart TD
 
 部分列表支持地址参数，便于直接展示指定内容：
 
-| 示例路径 | 打开后的行为 |
-| --- | --- |
-| `/pages/products.html?category=tables#collection` | 选择桌类产品，并定位到产品列表 |
-| `/pages/products.html?product=ayabi-chair` | 打开 Ayabi Chair 产品预览 |
-| `/pages/magazine.html?category=References` | 显示项目案例类文章 |
-| `/pages/magazine.html?article=retreat-park-am-see-nattika` | 打开对应文章预览 |
-| `/pages/about.html#history` | 定位到发展历程 |
-| `/pages/contact.html#retailers` | 定位到门店列表 |
+| 示例路径                                                   | 打开后的行为                   |
+| ---------------------------------------------------------- | ------------------------------ |
+| `/pages/products.html?category=tables#collection`          | 选择桌类产品，并定位到产品列表 |
+| `/pages/products.html?product=ayabi-chair`                 | 打开 Ayabi Chair 产品预览      |
+| `/pages/magazine.html?category=References`                 | 显示项目案例类文章             |
+| `/pages/magazine.html?article=retreat-park-am-see-nattika` | 打开对应文章预览               |
+| `/pages/about.html#history`                                | 定位到发展历程                 |
+| `/pages/contact.html#retailers`                            | 定位到门店列表                 |
 
 ## 技术架构与目录
 
@@ -213,12 +213,12 @@ walterknoll/
 
 每页按以下顺序引入样式。后面的页面样式可以覆盖前面的公共规则。
 
-| 层次 | 文件 | 职责 |
-| --- | --- | --- |
-| 基础层 | `css/base.css` | 颜色、字体、重置、通用排版和基础断点 |
-| 布局层 | `css/layout.css` | 导航、页脚、容器、网格和区块布局 |
-| 组件层 | `css/components.css` | 卡片、按钮、筛选、分页、表单和弹窗 |
-| 页面层 | `css/pages/页面名.css` | 时间轴、色卡和页面专属布局 |
+| 层次   | 文件                   | 职责                                 |
+| ------ | ---------------------- | ------------------------------------ |
+| 基础层 | `css/base.css`         | 颜色、字体、重置、通用排版和基础断点 |
+| 布局层 | `css/layout.css`       | 导航、页脚、容器、网格和区块布局     |
+| 组件层 | `css/components.css`   | 卡片、按钮、筛选、分页、表单和弹窗   |
+| 页面层 | `css/pages/页面名.css` | 时间轴、色卡和页面专属布局           |
 
 ## 公共功能与视觉规范
 
@@ -242,17 +242,17 @@ walterknoll/
 
 项目使用黑色、白色和灰阶。标题采用 Georgia，正文采用系统无衬线字体。官网商业字体未纳入项目，因此文字宽度和字形存在差异。
 
-| 样式项 | 当前取值或规则 |
-| --- | --- |
-| 主文字颜色 | `#252525` |
-| 页面背景 | `#ffffff` |
-| 浅灰背景 | `#f5f5f3` |
-| 分隔线 | 黑色，透明度为 16% |
-| 桌面基础顶栏高度 | 64 px |
-| 平板与手机顶栏高度 | 48 px |
-| 1440 px 视口左右留白 | 各 44 px |
-| 常规内页主标题 | 56 px，窄屏缩小 |
-| 桌面首页主标题 | 80 px，窄屏缩小 |
+| 样式项               | 当前取值或规则     |
+| -------------------- | ------------------ |
+| 主文字颜色           | `#252525`          |
+| 页面背景             | `#ffffff`          |
+| 浅灰背景             | `#f5f5f3`          |
+| 分隔线               | 黑色，透明度为 16% |
+| 桌面基础顶栏高度     | 64 px              |
+| 平板与手机顶栏高度   | 48 px              |
+| 1440 px 视口左右留白 | 各 44 px           |
+| 常规内页主标题       | 56 px，窄屏缩小    |
+| 桌面首页主标题       | 80 px，窄屏缩小    |
 
 ### 响应式与键盘操作
 
@@ -274,14 +274,14 @@ A 负责网站入口和品牌介绍。首页是视觉基准，也连接其他成
 
 **关于页内容。** 页面包含品牌介绍、历史时间轴和设计师区。时间轴选取 1865 年、1925 年、1949 年和 1985 年的节点。设计师区展示 EOOS 和 Foster + Partners 的入口内容。
 
-| 负责文件 | 用途 |
-| --- | --- |
-| [index.html](../index.html) | 首页 5 个内容区 |
-| [about.html](../pages/about.html) | 品牌、历史和设计师内容 |
-| [index.css](../css/pages/index.css) | 首屏、轮播控件和首页布局 |
-| [about.css](../css/pages/about.css) | 时间轴和关于页布局 |
-| [index.js](../js/pages/index.js) | 轮播状态和切换逻辑 |
-| `assets/images/index/`、`assets/images/about/` | 首页和品牌图片 |
+| 负责文件                                       | 用途                     |
+| ---------------------------------------------- | ------------------------ |
+| [index.html](../index.html)                    | 首页 5 个内容区          |
+| [about.html](../pages/about.html)              | 品牌、历史和设计师内容   |
+| [index.css](../css/pages/index.css)            | 首屏、轮播控件和首页布局 |
+| [about.css](../css/pages/about.css)            | 时间轴和关于页布局       |
+| [index.js](../js/pages/index.js)               | 轮播状态和切换逻辑       |
+| `assets/images/index/`、`assets/images/about/` | 首页和品牌图片           |
 
 A 修改轮播内容时，应维护 `catalog.json` 的 `slides` 字段。默认首屏内容保存在 HTML 中，也应与首张轮播记录一致。关于页主要使用静态 HTML。
 
@@ -307,14 +307,14 @@ B 负责产品浏览流程。用户先从分类选择产品，再通过筛选和
 
 分页按钮支持首尾边界。筛选后重新计算页数，并返回第一页。产品图片和名称可以打开预览，心形按钮可以加入公共心愿单。
 
-| 负责文件 | 用途 |
-| --- | --- |
-| [products.html](../pages/products.html) | 分类入口和产品总览 |
-| [products-chairs.html](../pages/products-chairs.html) | 座椅列表和分页容器 |
-| [products.css](../css/pages/products.css) | 总览分类与卡片网格 |
-| [products-chairs.css](../css/pages/products-chairs.css) | 座椅网格和分页布局 |
-| [products.js](../js/pages/products.js) | 筛选、加载更多和分页 |
-| `assets/images/products/` | 分类图片和产品图片 |
+| 负责文件                                                | 用途                 |
+| ------------------------------------------------------- | -------------------- |
+| [products.html](../pages/products.html)                 | 分类入口和产品总览   |
+| [products-chairs.html](../pages/products-chairs.html)   | 座椅列表和分页容器   |
+| [products.css](../css/pages/products.css)               | 总览分类与卡片网格   |
+| [products-chairs.css](../css/pages/products-chairs.css) | 座椅网格和分页布局   |
+| [products.js](../js/pages/products.js)                  | 筛选、加载更多和分页 |
+| `assets/images/products/`                               | 分类图片和产品图片   |
 
 B 维护 `catalog.json` 的 `products` 和 `categories` 字段。产品卡片通过 `productCard()` 输出。列表按产品 `id` 去重，新增跨分类记录时需检查实际筛选结果。
 
@@ -340,15 +340,15 @@ C 负责材料的视觉展示和颜色选择。材料库介绍材料类别，皮
 
 点击色卡后，大图、图片说明和选中色名同步变化。页面底部连接织物、木材和石材入口。颜色效果用于屏幕预览，最终选择应参考实物样本。
 
-| 负责文件 | 用途 |
-| --- | --- |
-| [materials.html](../pages/materials.html) | 材料卡片和常见问题 |
-| [materials-leathers.html](../pages/materials-leathers.html) | Elen 介绍与色卡 |
-| [materials.css](../css/pages/materials.css) | 材料网格、悬停和预览 |
-| [materials-leathers.css](../css/pages/materials-leathers.css) | 纹理大图与色卡布局 |
-| [materials.js](../js/pages/materials.js) | 材料预览窗口 |
-| [materials-leathers.js](../js/pages/materials-leathers.js) | 色卡选择和图片同步 |
-| `assets/images/materials/` | 材料照片和皮革纹理 |
+| 负责文件                                                      | 用途                 |
+| ------------------------------------------------------------- | -------------------- |
+| [materials.html](../pages/materials.html)                     | 材料卡片和常见问题   |
+| [materials-leathers.html](../pages/materials-leathers.html)   | Elen 介绍与色卡      |
+| [materials.css](../css/pages/materials.css)                   | 材料网格、悬停和预览 |
+| [materials-leathers.css](../css/pages/materials-leathers.css) | 纹理大图与色卡布局   |
+| [materials.js](../js/pages/materials.js)                      | 材料预览窗口         |
+| [materials-leathers.js](../js/pages/materials-leathers.js)    | 色卡选择和图片同步   |
+| `assets/images/materials/`                                    | 材料照片和皮革纹理   |
 
 材料卡片和色卡按钮当前保存在静态 HTML 中。`catalog.json` 的 `leathers` 字段保留纹理索引。维护色卡时，应核对 HTML、索引和图片路径。
 
@@ -374,15 +374,15 @@ D 负责内容浏览和专业资源入口。杂志呈现设计故事与项目案
 
 下载列表包含项目指南、材料笔记和护理参考 3 个文本文件。这些文件属于本项目的教学资料。官方 CAD 数据、产品规格和宣传册通过原站下载入口获取。
 
-| 负责文件 | 用途 |
-| --- | --- |
-| [magazine.html](../pages/magazine.html) | 标签页和文章列表容器 |
-| [professionals.html](../pages/professionals.html) | 服务卡片与下载列表 |
-| [magazine.css](../css/pages/magazine.css) | 标签页、文章行与预览 |
-| [professionals.css](../css/pages/professionals.css) | 服务卡片和资源布局 |
-| [magazine.js](../js/pages/magazine.js) | 分类切换、键盘操作和文章预览 |
-| `assets/images/magazine/`、`assets/images/professionals/` | 文章与专业服务图片 |
-| `assets/downloads/` | 3 个教学参考文件 |
+| 负责文件                                                  | 用途                         |
+| --------------------------------------------------------- | ---------------------------- |
+| [magazine.html](../pages/magazine.html)                   | 标签页和文章列表容器         |
+| [professionals.html](../pages/professionals.html)         | 服务卡片与下载列表           |
+| [magazine.css](../css/pages/magazine.css)                 | 标签页、文章行与预览         |
+| [professionals.css](../css/pages/professionals.css)       | 服务卡片和资源布局           |
+| [magazine.js](../js/pages/magazine.js)                    | 分类切换、键盘操作和文章预览 |
+| `assets/images/magazine/`、`assets/images/professionals/` | 文章与专业服务图片           |
+| `assets/downloads/`                                       | 3 个教学参考文件             |
 
 D 维护 `catalog.json` 的 `articles` 字段。专业服务页主要使用静态 HTML 和浏览器原生下载功能，当前没有独立的 `professionals.js`。
 
@@ -410,14 +410,14 @@ E 负责可持续内容和联系入口。可持续页介绍品牌的长期设计
 
 联系表单包含姓名、邮箱、主题、留言和演示确认选项。浏览器检查必填项与邮箱格式，脚本补充姓名和留言的空白校验。通过验证后，页面提示消息未发送，并清空输入。
 
-| 负责文件 | 用途 |
-| --- | --- |
-| [sustainability.html](../pages/sustainability.html) | 统计、图文和来源链接 |
-| [contact.html](../pages/contact.html) | 门店、搜索和联系表单 |
-| [sustainability.css](../css/pages/sustainability.css) | 统计和图文布局 |
-| [contact.css](../css/pages/contact.css) | 门店卡片与表单样式 |
-| [contact.js](../js/pages/contact.js) | 门店过滤和表单验证 |
-| `assets/images/sustainability/`、`assets/images/contact/` | 可持续与门店照片 |
+| 负责文件                                                  | 用途                 |
+| --------------------------------------------------------- | -------------------- |
+| [sustainability.html](../pages/sustainability.html)       | 统计、图文和来源链接 |
+| [contact.html](../pages/contact.html)                     | 门店、搜索和联系表单 |
+| [sustainability.css](../css/pages/sustainability.css)     | 统计和图文布局       |
+| [contact.css](../css/pages/contact.css)                   | 门店卡片与表单样式   |
+| [contact.js](../js/pages/contact.js)                      | 门店过滤和表单验证   |
+| `assets/images/sustainability/`、`assets/images/contact/` | 可持续与门店照片     |
 
 门店卡片目前保存在 `contact.html` 中。`catalog.json` 的 `stores` 字段保存参考门店，和页面选取的 6 个地点不是完全相同的集合。修改展示信息时，应直接核对页面卡片。
 
@@ -437,14 +437,14 @@ E 负责可持续内容和联系入口。可持续页介绍品牌的长期设计
 
 本地索引位于 [catalog.json](../assets/data/catalog.json)。页面读取哪些字段，取决于具体脚本。静态页面内容仍需在对应 HTML 中维护。
 
-| 字段 | 当前数量 | 内容与主要使用位置 |
-| --- | --- | --- |
-| `products` | 60 条 | 产品分类记录，产品列表、搜索和预览使用 |
-| `categories` | 10 条 | 分类名称、标识和图片，产品筛选使用 |
-| `leathers` | 15 条 | Elen 纹理索引，供色卡内容核对 |
-| `articles` | 9 条 | 文章标题、分类、图片和原文入口 |
-| `stores` | 6 条 | 参考门店记录，展示页另选总部和品牌空间 |
-| `slides` | 6 条 | 首页图片、标题、说明和分类入口 |
+| 字段         | 当前数量 | 内容与主要使用位置                     |
+| ------------ | -------- | -------------------------------------- |
+| `products`   | 60 条    | 产品分类记录，产品列表、搜索和预览使用 |
+| `categories` | 10 条    | 分类名称、标识和图片，产品筛选使用     |
+| `leathers`   | 15 条    | Elen 纹理索引，供色卡内容核对          |
+| `articles`   | 9 条     | 文章标题、分类、图片和原文入口         |
+| `stores`     | 6 条     | 参考门店记录，展示页另选总部和品牌空间 |
+| `slides`     | 6 条     | 首页图片、标题、说明和分类入口         |
 
 60 条产品分类记录对应 59 个不同产品。Management-X 在多个分类中出现。当前列表按 `id` 去重，分类记录数量不直接等于页面展示数量。
 
@@ -528,14 +528,14 @@ Linux 环境需要同时安装浏览器系统依赖时，可使用 `npx playwrig
 
 ### 团队演示顺序
 
-| 顺序 | 演示成员 | 演示内容 |
-| --- | --- | --- |
-| 1 | A | 首页视觉、轮播、导航和品牌介绍 |
-| 2 | B | 产品筛选、分页、预览和收藏 |
-| 3 | C | 材料入口、纹理大图和颜色切换 |
-| 4 | D | 杂志分类、文章预览和资源下载 |
-| 5 | E | 可持续来源、门店搜索和表单验证 |
-| 6 | 全体 | 手机视口、页面互通和测试结果 |
+| 顺序 | 演示成员 | 演示内容                       |
+| ---- | -------- | ------------------------------ |
+| 1    | A        | 首页视觉、轮播、导航和品牌介绍 |
+| 2    | B        | 产品筛选、分页、预览和收藏     |
+| 3    | C        | 材料入口、纹理大图和颜色切换   |
+| 4    | D        | 杂志分类、文章预览和资源下载   |
+| 5    | E        | 可持续来源、门店搜索和表单验证 |
+| 6    | 全体     | 手机视口、页面互通和测试结果   |
 
 演示时先展示用户操作，再说明对应代码入口。说明测试结果时，区分本地演示、官方外链和已实现的页面功能。
 
@@ -551,17 +551,17 @@ Linux 环境需要同时安装浏览器系统依赖时，可使用 `npx playwrig
 
 ## 常见问题
 
-| 问题 | 处理方法 |
-| --- | --- |
-| 页面没有加载列表 | 使用 HTTP 地址访问，检查 `catalog.json` 请求和浏览器控制台 |
-| 图片显示失败 | 核对相对路径和大小写，再运行 `npm run check` |
-| 导航修改后其他页未更新 | 编辑公共片段，再运行 `npm run sync:components` |
-| 启动时报端口占用 | 通过 `PORT` 选择其他端口 |
-| 浏览器测试无法启动 | 安装 Playwright 对应的 Chromium，检查系统依赖和 4174 端口 |
-| 修改 JSON 后页面报错 | 检查逗号、引号和字段结构，保持合法 JSON |
-| 页面布局影响其他成员 | 判断规则是否误放公共层，将专属规则移到页面 CSS |
-| 刷新后心愿单发生变化 | 检查浏览器是否清理站点存储，或是否切换访问地址 |
-| 联系表单没有收到邮件 | 当前实现只演示本地验证，实际咨询使用官网联系入口 |
+| 问题                   | 处理方法                                                   |
+| ---------------------- | ---------------------------------------------------------- |
+| 页面没有加载列表       | 使用 HTTP 地址访问，检查 `catalog.json` 请求和浏览器控制台 |
+| 图片显示失败           | 核对相对路径和大小写，再运行 `npm run check`               |
+| 导航修改后其他页未更新 | 编辑公共片段，再运行 `npm run sync:components`             |
+| 启动时报端口占用       | 通过 `PORT` 选择其他端口                                   |
+| 浏览器测试无法启动     | 安装 Playwright 对应的 Chromium，检查系统依赖和 4174 端口  |
+| 修改 JSON 后页面报错   | 检查逗号、引号和字段结构，保持合法 JSON                    |
+| 页面布局影响其他成员   | 判断规则是否误放公共层，将专属规则移到页面 CSS             |
+| 刷新后心愿单发生变化   | 检查浏览器是否清理站点存储，或是否切换访问地址             |
+| 联系表单没有收到邮件   | 当前实现只演示本地验证，实际咨询使用官网联系入口           |
 
 ## 当前边界与后续改进
 

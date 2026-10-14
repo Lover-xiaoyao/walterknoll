@@ -5,7 +5,7 @@
 ## 用户提供
 
 - deepseek_text_20261014_46c253.txt：目录与 CSS 分层要求。
-- wk_副本.zip：十页骨架、两份 Logo、首页摄影及材料图。
+- wk\_副本.zip：十页骨架、两份 Logo、首页摄影及材料图。
 - 页面分工截图：A–E 每组两页与核心模块。
 - jyy/：课程字幕、梳理、工程 Playbook 及示例工具。
 
@@ -13,21 +13,21 @@
 
 ## 官网页面
 
-| 本项目 | 官方参考 |
-| --- | --- |
-| Home | https://www.walterknoll.info/en |
-| About | https://www.walterknoll.info/en/about |
-| History | https://www.walterknoll.info/en/about/history |
-| Products | https://www.walterknoll.info/en/products |
-| Chairs | https://www.walterknoll.info/en/products/chairs-barstools |
-| Materials | https://www.walterknoll.info/en/materials |
-| Leathers | https://www.walterknoll.info/en/materials/overview/leathers |
-| Magazine | https://www.walterknoll.info/en/magazine |
-| Professionals | https://www.walterknoll.info/en/professionals |
-| Sustainability | https://www.walterknoll.info/en/sustainability |
-| Sustainability facts | https://www.walterknoll.info/en/sustainability/attitude |
-| Retailers | https://www.walterknoll.info/en/store |
-| Contact | https://www.walterknoll.info/en/professionals/contact |
+| 本项目               | 官方参考                                                    |
+| -------------------- | ----------------------------------------------------------- |
+| Home                 | https://www.walterknoll.info/en                             |
+| About                | https://www.walterknoll.info/en/about                       |
+| History              | https://www.walterknoll.info/en/about/history               |
+| Products             | https://www.walterknoll.info/en/products                    |
+| Chairs               | https://www.walterknoll.info/en/products/chairs-barstools   |
+| Materials            | https://www.walterknoll.info/en/materials                   |
+| Leathers             | https://www.walterknoll.info/en/materials/overview/leathers |
+| Magazine             | https://www.walterknoll.info/en/magazine                    |
+| Professionals        | https://www.walterknoll.info/en/professionals               |
+| Sustainability       | https://www.walterknoll.info/en/sustainability              |
+| Sustainability facts | https://www.walterknoll.info/en/sustainability/attitude     |
+| Retailers            | https://www.walterknoll.info/en/store                       |
+| Contact              | https://www.walterknoll.info/en/professionals/contact       |
 
 ## 布局观察
 
@@ -37,4 +37,4 @@
 
 截图及字体观察可通过 npm run capture:reference 重新采集。官网的 Cookie 窗口曾出现在座椅页参考截图中；本地网站没有跟踪脚本，不添加此窗口。
 
-assets.json 记录新下载图片的本地路径与官方源 URL。ZIP 自带图片位于 assets/images/index/、材料两张 material-* 图片与 assets/images/common/。产品名称、分类、材料与门店数据提取自上述公开页面，只保留本项目使用的字段。
+assets.json 记录新下载图片的本地路径与官方源 URL。ZIP 自带图片位于 assets/images/index/、材料两张 material-\* 图片与 assets/images/common/。产品名称、分类、材料与门店数据提取自上述公开页面，只保留本项目使用的字段。
