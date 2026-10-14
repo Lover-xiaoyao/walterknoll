@@ -59,7 +59,7 @@
           class="icon-button"
           type="button"
           aria-label="Search"
-          data-open="searchDialog"
+          aria-disabled="true"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="10.5" cy="10.5" r="7" />
@@ -70,24 +70,21 @@
           class="icon-button"
           type="button"
           aria-label="Wish list"
-          data-open="wishlistDialog"
+          aria-disabled="true"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"
             /></svg
-          ><span class="wish-count" hidden></span>
+        >
         </button>
-        <a class="utility-link" href="../pages/contact.html#retailers"
-          >Retailers</a
-        >
-        <a class="utility-link" href="../pages/professionals.html#downloads"
-          >Downloads</a
-        >
-        <a class="utility-link" href="../pages/contact.html#contact">Contact</a>
+        <a class="utility-link" href="#" aria-disabled="true">Retailers</a>
+        <a class="utility-link" href="#" aria-disabled="true">Downloads</a>
+        <a class="utility-link" href="#" aria-disabled="true">Contact</a>
         <a
           class="icon-button mobile-contact"
-          href="../pages/contact.html"
+          href="#"
+          aria-disabled="true"
           aria-label="Retailers and contact"
           ><svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z" />
@@ -117,83 +114,14 @@
         <a href="../pages/about.html#designers">Designers <span>→</span></a>
         <a href="../pages/professionals.html">Professionals <span>→</span></a>
         <a href="../pages/about.html">About us <span>→</span></a>
-        <a href="../pages/sustainability.html">Sustainability <span>→</span></a>
-        <a href="../pages/contact.html#retailers">Retailers <span>→</span></a>
-        <a href="../pages/professionals.html#downloads"
-          >Downloads <span>→</span></a
+        <a href="../pages/sustainability.html"
+          >Sustainability <span>→</span></a
         >
-        <a href="../pages/contact.html#contact">Contact <span>→</span></a>
+        <a href="#" aria-disabled="true">Retailers <span>→</span></a>
+        <a href="#" aria-disabled="true">Downloads <span>→</span></a>
+        <a href="#" aria-disabled="true">Contact <span>→</span></a>
       </nav>
     </dialog>
-    <dialog
-      class="search-dialog"
-      id="searchDialog"
-      aria-labelledby="searchTitle"
-    >
-      <div class="dialog-top">
-        <h2 id="searchTitle">Find your inspiration.</h2>
-        <button
-          class="icon-button"
-          type="button"
-          aria-label="Close search"
-          data-close
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m5 5 14 14M19 5 5 19" />
-          </svg>
-        </button>
-      </div>
-      <label class="search-field"
-        ><span class="sr-only">Search products, materials and stories</span
-        ><input
-          id="siteSearch"
-          type="search"
-          placeholder="Search products, materials and stories…"
-          autocomplete="off"
-      /></label>
-      <p class="small muted" id="searchSummary" role="status">
-        Explore the collection or enter a search term.
-      </p>
-      <div id="searchResults" class="search-results"></div>
-    </dialog>
-    <dialog
-      class="content-dialog"
-      id="wishlistDialog"
-      aria-labelledby="wishlistTitle"
-    >
-      <div class="dialog-top">
-        <h2 id="wishlistTitle">Your wish list.</h2>
-        <button
-          class="icon-button"
-          type="button"
-          aria-label="Close wish list"
-          data-close
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m5 5 14 14M19 5 5 19" />
-          </svg>
-        </button>
-      </div>
-      <div id="wishlistContent"></div>
-    </dialog>
-    <dialog
-      class="content-dialog"
-      id="detailDialog"
-      aria-labelledby="detailTitle"
-    >
-      <button
-        class="icon-button detail-close"
-        type="button"
-        aria-label="Close detail"
-        data-close
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m5 5 14 14M19 5 5 19" />
-        </svg>
-      </button>
-      <div id="detailContent"></div>
-    </dialog>
-
     <!-- shared:header:end -->
     <main id="main">
       <section class="image-hero material-hero">
@@ -224,8 +152,6 @@
           <article
             class="material-card image-card"
             id="leathers"
-            data-description="Discover the warmth, grain and evolving character of leather."
-            data-source="https://www.walterknoll.info/en/materials/overview/leathers"
           >
             <a class="material-open" href="#" aria-disabled="true"
               ><span class="image-frame"
@@ -245,10 +171,8 @@
           <article
             class="material-card image-card"
             id="fabrics"
-            data-description="Textures and colors that bring softness into a room."
-            data-source="https://www.walterknoll.info/en/materials/overview/fabrics"
           >
-            <button class="material-open" type="button" data-material="Fabrics">
+            <button class="material-open" type="button" aria-disabled="true">
               <span class="image-frame"
                 ><img
                   class=""
@@ -265,14 +189,10 @@
           <article
             class="material-card image-card"
             id="graded-in-fabrics"
-            data-description="Explore additional fabric choices for the collection."
-            data-source="https://www.walterknoll.info/en/materials/overview/graded-in-fabrics"
           >
             <button
               class="material-open"
-              type="button"
-              data-material="Graded-In fabrics"
-            >
+              type="button" aria-disabled="true">
               <span class="image-frame"
                 ><img
                   class=""
@@ -290,10 +210,8 @@
           <article
             class="material-card image-card"
             id="woods"
-            data-description="Natural grain and a tactile surface, shaped by craftsmanship."
-            data-source="https://www.walterknoll.info/en/materials/overview/woods"
           >
-            <button class="material-open" type="button" data-material="Woods">
+            <button class="material-open" type="button" aria-disabled="true">
               <span class="image-frame"
                 ><img
                   class=""
@@ -310,10 +228,8 @@
           <article
             class="material-card image-card"
             id="stones"
-            data-description="Distinct patterns in stone, marble and other mineral surfaces."
-            data-source="https://www.walterknoll.info/en/materials/overview/stones"
           >
-            <button class="material-open" type="button" data-material="Stones">
+            <button class="material-open" type="button" aria-disabled="true">
               <span class="image-frame"
                 ><img
                   class=""
@@ -332,14 +248,10 @@
           <article
             class="material-card image-card"
             id="other-surfaces"
-            data-description="Finishes in metal, glass and other surface materials."
-            data-source="https://www.walterknoll.info/en/materials/overview/other-surfaces"
           >
             <button
               class="material-open"
-              type="button"
-              data-material="Other surfaces"
-            >
+              type="button" aria-disabled="true">
               <span class="image-frame"
                 ><img
                   class=""
@@ -357,14 +269,10 @@
           <article
             class="material-card image-card"
             id="entry-inspiration"
-            data-description="Explore combinations of natural colors and textures."
-            data-source="https://www.walterknoll.info/en/materials/inspiration"
           >
             <button
               class="material-open"
-              type="button"
-              data-material="Inspiration"
-            >
+              type="button" aria-disabled="true">
               <span class="image-frame"
                 ><img
                   class=""
@@ -382,14 +290,10 @@
           <article
             class="material-card image-card"
             id="materials-in-use"
-            data-description="See materials in the context of living spaces."
-            data-source="https://www.walterknoll.info/en/materials/materials-in-use"
           >
             <button
               class="material-open"
-              type="button"
-              data-material="Materials in use"
-            >
+              type="button" aria-disabled="true">
               <span class="image-frame"
                 ><img
                   class=""
@@ -407,10 +311,8 @@
           <article
             class="material-card image-card"
             id="entry-faq"
-            data-description="Answers to questions about materials, care and samples."
-            data-source="https://www.walterknoll.info/en/materials/faq"
           >
-            <button class="material-open" type="button" data-material="FAQ">
+            <button class="material-open" type="button" aria-disabled="true">
               <span class="image-frame"
                 ><img
                   class=""
@@ -464,7 +366,7 @@
           New designs, remarkable spaces and stories from the world of Walter
           Knoll.
         </p>
-        <button class="button" type="button" data-open="newsletterDialog">
+        <button class="button" type="button" aria-disabled="true">
           Subscribe <span aria-hidden="true">→</span>
         </button>
       </section>
@@ -487,152 +389,70 @@
           <div>
             <h3>Products</h3>
             <ul>
-              <li>
-                <a href="../pages/products-chairs.html"
-                  >Chairs &amp; Barstools</a
-                >
-              </li>
-              <li>
-                <a href="../pages/products.html?category=lounge-chairs"
-                  >Lounge Chairs</a
-                >
-              </li>
-              <li>
-                <a href="../pages/products.html?category=sofas-benches"
-                  >Sofas &amp; Benches</a
-                >
-              </li>
-              <li>
-                <a href="../pages/products.html?category=tables">Tables</a>
-              </li>
-              <li>
-                <a href="../pages/products.html?category=executive-desks"
-                  >Executive Desks</a
-                >
-              </li>
-              <li><a href="../pages/products.html">All Products</a></li>
+              <li><a href="#" aria-disabled="true">Chairs &amp; Barstools</a></li>
+              <li><a href="#" aria-disabled="true">Lounge Chairs</a></li>
+              <li><a href="#" aria-disabled="true">Sofas &amp; Benches</a></li>
+              <li><a href="#" aria-disabled="true">Tables</a></li>
+              <li><a href="#" aria-disabled="true">Executive Desks</a></li>
+              <li><a href="#" aria-disabled="true">All Products</a></li>
             </ul>
           </div>
           <div>
             <h3>Material Library</h3>
             <ul>
-              <li>
-                <a href="../pages/materials.html#inspiration">Inspiration</a>
-              </li>
-              <li><a href="../pages/materials-leathers.html">Leathers</a></li>
-              <li><a href="../pages/materials.html#fabrics">Fabrics</a></li>
-              <li><a href="../pages/materials.html#woods">Woods</a></li>
-              <li><a href="../pages/materials.html#stones">Stones</a></li>
-              <li><a href="../pages/materials.html#faq">FAQ</a></li>
+              <li><a href="#" aria-disabled="true">Inspiration</a></li>
+              <li><a href="#" aria-disabled="true">Leathers</a></li>
+              <li><a href="#" aria-disabled="true">Fabrics</a></li>
+              <li><a href="#" aria-disabled="true">Woods</a></li>
+              <li><a href="#" aria-disabled="true">Stones</a></li>
+              <li><a href="#" aria-disabled="true">FAQ</a></li>
             </ul>
           </div>
           <div>
             <h3>About us</h3>
             <ul>
-              <li><a href="../pages/about.html#purpose">Our Purpose</a></li>
-              <li><a href="../pages/about.html#history">Our History</a></li>
-              <li><a href="../pages/about.html#designers">Our Designers</a></li>
-              <li><a href="../pages/contact.html#retailers">Showrooms</a></li>
-              <li><a href="../pages/sustainability.html">Sustainability</a></li>
+              <li><a href="#" aria-disabled="true">Our Purpose</a></li>
+              <li><a href="#" aria-disabled="true">Our History</a></li>
+              <li><a href="#" aria-disabled="true">Our Designers</a></li>
+              <li><a href="#" aria-disabled="true">Showrooms</a></li>
+              <li><a href="#" aria-disabled="true">Sustainability</a></li>
             </ul>
           </div>
           <div>
             <h3>Professionals</h3>
             <ul>
-              <li>
-                <a href="../pages/professionals.html#downloads">Downloads</a>
-              </li>
-              <li>
-                <a href="../pages/magazine.html?category=References"
-                  >Projects</a
-                >
-              </li>
-              <li>
-                <a href="../pages/professionals.html#campus"
-                  >Campus of Competence</a
-                >
-              </li>
-              <li>
-                <a href="../pages/professionals.html#tools">pCon Tools</a>
-              </li>
-              <li><a href="../pages/contact.html#contact">Contact</a></li>
+              <li><a href="#" aria-disabled="true">Downloads</a></li>
+              <li><a href="#" aria-disabled="true">Projects</a></li>
+              <li><a href="#" aria-disabled="true">Campus of Competence</a></li>
+              <li><a href="#" aria-disabled="true">pCon Tools</a></li>
+              <li><a href="#" aria-disabled="true">Contact</a></li>
             </ul>
           </div>
           <div>
             <h3>Magazine</h3>
             <ul>
-              <li><a href="../pages/magazine.html">All Topics</a></li>
-              <li><a href="../pages/magazine.html?category=News">News</a></li>
-              <li>
-                <a href="../pages/magazine.html?category=Stories">Stories</a>
-              </li>
-              <li>
-                <a href="../pages/magazine.html?category=References"
-                  >References</a
-                >
-              </li>
+              <li><a href="#" aria-disabled="true">All Topics</a></li>
+              <li><a href="#" aria-disabled="true">News</a></li>
+              <li><a href="#" aria-disabled="true">Stories</a></li>
+              <li><a href="#" aria-disabled="true">References</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <p>© Walter Knoll · Frontend study</p>
           <p>
-            Independent educational recreation. Images and brand belong to
-            Walter Knoll.
+            Independent educational recreation. Images and brand belong to Walter
+            Knoll.
           </p>
-          <a
-            href="https://www.walterknoll.info/en"
-            target="_blank"
-            rel="noopener"
+          <a href="https://www.walterknoll.info/en" target="_blank" rel="noopener"
             >Visit the original ↗</a
-          ><button class="text-button" type="button" data-top>
+          ><button class="text-button" type="button" aria-disabled="true">
             Back to top ↑
           </button>
         </div>
       </div>
     </footer>
-    <dialog
-      class="content-dialog newsletter-dialog"
-      id="newsletterDialog"
-      aria-labelledby="newsletterTitle"
-    >
-      <div class="dialog-top">
-        <h2 id="newsletterTitle">Stay inspired.</h2>
-        <button
-          class="icon-button"
-          type="button"
-          aria-label="Close newsletter"
-          data-close
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m5 5 14 14M19 5 5 19" />
-          </svg>
-        </button>
-      </div>
-      <p>Discover design, materials and new perspectives.</p>
-      <form id="newsletterForm">
-        <label
-          >Email address<input
-            type="email"
-            name="email"
-            autocomplete="email"
-            required
-            placeholder="Your email address" /></label
-        ><label class="checkbox-field"
-          ><input type="checkbox" required /> I understand this is a local
-          demonstration.</label
-        ><button class="button" type="submit">Subscribe <span>→</span></button>
-        <p class="form-status" role="status"></p>
-      </form>
-      <p class="small muted">
-        Study demo: your address is not sent or saved. Visit the original
-        website for the official newsletter.
-      </p>
-    </dialog>
-    <div class="toast" role="status" hidden></div>
-
     <!-- shared:footer:end -->
     <script type="module" src="../js/common.js"></script>
-    <script type="module" src="../js/pages/materials.js"></script>
   </body>
 </html>

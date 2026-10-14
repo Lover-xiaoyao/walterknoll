@@ -63,12 +63,6 @@
     padding: 0
 }
 
-.article-preview {
-    aspect-ratio: 3/2;
-    object-fit: cover;
-    margin-bottom: 26px
-}
-
 @media(max-width:859px) {
     .article-row {
         gap: 32px

@@ -20,19 +20,6 @@
     height: 23px
 }
 
-.wish-count {
-    position: absolute;
-    right: -5px;
-    top: 0;
-    background: var(--ink);
-    color: var(--paper);
-    font: 9px var(--sans);
-    border-radius: 50%;
-    min-width: 14px;
-    height: 14px;
-    line-height: 14px
-}
-
 .arrow-link {
     display: inline-flex;
     align-items: center;
@@ -83,9 +70,9 @@
     text-underline-offset: 4px
 }
 
-/* Ten-page scope: cards and buttons in the page body never open another page. */
-a[aria-disabled=true],
-a[aria-disabled=true]:hover {
+/* The template is display-only: anything marked aria-disabled does nothing. */
+[aria-disabled=true],
+[aria-disabled=true]:hover {
     color: inherit;
     cursor: not-allowed
 }
@@ -367,89 +354,6 @@ dialog::backdrop {
     font-size: 20px
 }
 
-.search-dialog {
-    width: min(900px, calc(100% - 40px));
-    padding: 40px
-}
-
-.search-field input {
-    font-size: 20px;
-    border-width: 0 0 1px;
-    padding: 16px 0;
-    margin-bottom: 18px
-}
-
-.search-results {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-    margin-top: 26px
-}
-
-.search-result {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 12px;
-    background: var(--soft);
-    min-width: 0
-}
-
-.search-result img {
-    width: 85px;
-    height: 85px;
-    object-fit: contain
-}
-
-.search-result strong {
-    font-weight: 400;
-    font-size: 20px;
-    font-family: var(--serif);
-    display: block;
-    line-height: 1.2
-}
-
-.search-result small {
-    color: var(--muted)
-}
-
-.content-dialog {
-    width: min(820px, calc(100% - 40px));
-    padding: 44px
-}
-
-.detail-close {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    background: var(--paper);
-    z-index: 1
-}
-
-.product-detail {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
-    align-items: center
-}
-
-.product-detail img {
-    aspect-ratio: 1;
-    object-fit: contain
-}
-
-.product-detail h2 {
-    font-size: 38px
-}
-
-.product-detail p {
-    margin-top: 18px
-}
-
-.product-detail .button {
-    margin-top: 28px
-}
-
 .newsletter-dialog {
     width: min(560px, calc(100% - 40px))
 }
@@ -464,43 +368,6 @@ dialog::backdrop {
 
 .newsletter-dialog label input[type=email] {
     margin-top: 8px
-}
-
-.toast {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    background: var(--ink);
-    color: var(--paper);
-    padding: 12px 24px;
-    font-size: 13px;
-    max-width: calc(100% - 40px);
-    text-align: center
-}
-
-.wishlist-row {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    border-bottom: 1px solid var(--line);
-    padding: 20px 0
-}
-
-.wishlist-row img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain
-}
-
-.wishlist-row h3 {
-    font-size: 24px
-}
-
-.wishlist-row .text-button {
-    margin-left: auto;
-    font-size: 12px
 }
 
 .image-hero {
@@ -576,15 +443,6 @@ dialog::backdrop {
         bottom: 42px
     }
 
-    .content-dialog,
-    .search-dialog {
-        padding: 28px
-    }
-
-    .product-detail {
-        gap: 22px
-    }
-
     .dialog-top h2 {
         font-size: 30px
     }
@@ -610,23 +468,6 @@ dialog::backdrop {
 
     .image-hero .hero-caption p {
         font-size: 16px
-    }
-
-    .search-results,
-    .product-detail {
-        grid-template-columns: 1fr
-    }
-
-    .product-detail img {
-        max-height: 240px
-    }
-
-    .search-field input {
-        font-size: 17px
-    }
-
-    .content-dialog {
-        padding: 26px 20px
     }
 
     .dialog-top h2 {
@@ -664,12 +505,4 @@ dialog::backdrop {
         font-size: 22px
     }
 
-    .wishlist-row {
-        gap: 14px
-    }
-
-    .wishlist-row img {
-        width: 65px;
-        height: 65px
-    }
 }

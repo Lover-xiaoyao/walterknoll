@@ -41,7 +41,7 @@
       class="icon-button"
       type="button"
       aria-label="Search"
-      data-open="searchDialog"
+      aria-disabled="true"
     >
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="10.5" cy="10.5" r="7" />
@@ -52,26 +52,21 @@
       class="icon-button"
       type="button"
       aria-label="Wish list"
-      data-open="wishlistDialog"
+      aria-disabled="true"
     >
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
           d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"
         /></svg
-      ><span class="wish-count" hidden></span>
+    >
     </button>
-    <a class="utility-link" href="{{root}}pages/contact.html#retailers"
-      >Retailers</a
-    >
-    <a class="utility-link" href="{{root}}pages/professionals.html#downloads"
-      >Downloads</a
-    >
-    <a class="utility-link" href="{{root}}pages/contact.html#contact"
-      >Contact</a
-    >
+    <a class="utility-link" href="#" aria-disabled="true">Retailers</a>
+    <a class="utility-link" href="#" aria-disabled="true">Downloads</a>
+    <a class="utility-link" href="#" aria-disabled="true">Contact</a>
     <a
       class="icon-button mobile-contact"
-      href="{{root}}pages/contact.html"
+      href="#"
+      aria-disabled="true"
       aria-label="Retailers and contact"
       ><svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z" />
@@ -104,70 +99,8 @@
     <a href="{{root}}pages/sustainability.html"
       >Sustainability <span>→</span></a
     >
-    <a href="{{root}}pages/contact.html#retailers">Retailers <span>→</span></a>
-    <a href="{{root}}pages/professionals.html#downloads"
-      >Downloads <span>→</span></a
-    >
-    <a href="{{root}}pages/contact.html#contact">Contact <span>→</span></a>
+    <a href="#" aria-disabled="true">Retailers <span>→</span></a>
+    <a href="#" aria-disabled="true">Downloads <span>→</span></a>
+    <a href="#" aria-disabled="true">Contact <span>→</span></a>
   </nav>
-</dialog>
-<dialog class="search-dialog" id="searchDialog" aria-labelledby="searchTitle">
-  <div class="dialog-top">
-    <h2 id="searchTitle">Find your inspiration.</h2>
-    <button
-      class="icon-button"
-      type="button"
-      aria-label="Close search"
-      data-close
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="m5 5 14 14M19 5 5 19" />
-      </svg>
-    </button>
-  </div>
-  <label class="search-field"
-    ><span class="sr-only">Search products, materials and stories</span
-    ><input
-      id="siteSearch"
-      type="search"
-      placeholder="Search products, materials and stories…"
-      autocomplete="off"
-  /></label>
-  <p class="small muted" id="searchSummary" role="status">
-    Explore the collection or enter a search term.
-  </p>
-  <div id="searchResults" class="search-results"></div>
-</dialog>
-<dialog
-  class="content-dialog"
-  id="wishlistDialog"
-  aria-labelledby="wishlistTitle"
->
-  <div class="dialog-top">
-    <h2 id="wishlistTitle">Your wish list.</h2>
-    <button
-      class="icon-button"
-      type="button"
-      aria-label="Close wish list"
-      data-close
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="m5 5 14 14M19 5 5 19" />
-      </svg>
-    </button>
-  </div>
-  <div id="wishlistContent"></div>
-</dialog>
-<dialog class="content-dialog" id="detailDialog" aria-labelledby="detailTitle">
-  <button
-    class="icon-button detail-close"
-    type="button"
-    aria-label="Close detail"
-    data-close
-  >
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="m5 5 14 14M19 5 5 19" />
-    </svg>
-  </button>
-  <div id="detailContent"></div>
 </dialog>

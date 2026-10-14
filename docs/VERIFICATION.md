@@ -50,3 +50,13 @@ GitHub Actions 已配置相同检查流程。远端 CI 状态另看仓库 Action
 验证：Playwright 实测首页 11 处死链 href 全为 `#`、点击后 URL 不变、滚动位置不变（`y=600` 保持）、提示文字正常；弹窗开合时 `body.dialog-open` 正常增删；产品弹窗仍可打开；表单状态带 `.filled`；无脚本错误。`npm run check` **PASS**、`npm test` **35/35 通过**。
 
 说明：带 `aria-disabled="true"` 的链接在无障碍语义上是“已禁用”，因此 Playwright 的默认点击会拒绝操作（需要 `force: true`），人工点击不受影响。
+
+## 改成展示用静态 UI 模板（2026-10-14 追加）
+
+范围：十页只呈现界面，除顶部主导航与 logo 外不产生任何跳转，也不再有任何交互逻辑。
+
+删除：`#searchDialog`、`#wishlistDialog`、`#detailDialog`、`#newsletterDialog` 四个弹窗及其头部按钮/订阅按钮钩子；`js/pages/index.js`（轮播）、`contact.js`（门店搜索 + 表单校验）、`materials.js`（材料弹窗）、`materials-leathers.js`（色卡切换）四个脚本；`js/common.js` 里除“导航高亮、手机抽屉、死链不跳转”以外的全部逻辑（搜索、心愿单、localStorage、toast、回到顶部、订阅表单）；60 个只服务已删逻辑的 `data-*` 钩子；30 条只服务已删弹窗/搜索/心愿单的 CSS 规则。`js/pages/products.js` 与 `magazine.js` 改成只渲染列表（产品 12 条、座椅 9 条、杂志 9 条），筛选/分页/加载更多/Tab 都只是界面元素。
+
+保留并静态化：所有可见控件保留原样并标 `aria-disabled="true"`（筛选下拉与输入框、分类按钮、加载更多、分页按钮、材料九张卡、15 个皮革色卡、轮播圆点与暂停、搜索与心愿单图标、页脚回到顶部、联系表单的提交按钮改成 `type="button"`）；桌面/手机布局、配色、排版完全未改。
+
+验证：`npm run check` **PASS**（10 页、313 个本地链接/资源、共享片段、锚点、JS 语法）；`npm test` **27/27 通过**，其中新增三条针对本次范围的断言——① 全站只剩 `#menuDialog` 一个 `dialog`；② 十个页面里所有交互钩子计数为 0（只允许抽屉开关 1 个）；③ 逐页抽样点击正文、页头、页脚的失效控件，URL 与滚动位置都不许变化，并检查除主导航/logo/面包屑/内页锚点/`.txt` 下载/外链之外没有指向 `.html` 的链接。测试过程中抓出并修掉两个真问题：产品页 9 张分类图块原本是同页筛选链接（点了会重载页面），已改为死链；`.txt` 下载属于资料而非页面跳转，测试规则相应放宽。未验证：GitHub Actions 远端结果与 Safari/Firefox。
