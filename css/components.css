@@ -70,11 +70,11 @@
     text-underline-offset: 4px
 }
 
-/* The template is display-only: anything marked aria-disabled does nothing. */
+/* The template is display-only: dead controls are completely inert —
+   no pointer cursor, no hover change, no click. */
 [aria-disabled=true],
-[aria-disabled=true]:hover {
-    color: inherit;
-    cursor: not-allowed
+[aria-disabled=true] * {
+    pointer-events: none
 }
 
 .breadcrumbs {

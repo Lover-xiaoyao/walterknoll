@@ -227,6 +227,39 @@ try {
       assert.ok(clicked > 0, `${name} had no inert control to click`);
     }
   });
+  await check("dead controls show no cursor or hover feedback", async () => {
+    await open("index");
+    assert.equal(
+      await page.evaluate(
+        () =>
+          getComputedStyle(document.querySelector('[aria-disabled="true"]'))
+            .pointerEvents,
+      ),
+      "none",
+    );
+    const card = page.locator('#main a[aria-disabled="true"]').first();
+    const box = await card.boundingBox();
+    const point = [box.x + box.width / 2, box.y + box.height / 2];
+    const colour = await card.evaluate((el) => getComputedStyle(el).color);
+    await page.mouse.move(point[0], point[1]);
+    const hit = await page.evaluate(
+      ([x, y]) => {
+        const el = document.elementFromPoint(x, y);
+        return {
+          inside: !!el.closest('[aria-disabled="true"]'),
+          cursor: getComputedStyle(el).cursor,
+        };
+      },
+      point,
+    );
+    assert.equal(hit.inside, false, "dead control is still hit-testable");
+    assert.notEqual(hit.cursor, "not-allowed");
+    assert.equal(
+      await card.evaluate((el) => getComputedStyle(el).color),
+      colour,
+      "dead control still changes colour on hover",
+    );
+  });
   await check("every remaining link is navigation or an external source", async () => {
     for (const name of files) {
       await open(name);
