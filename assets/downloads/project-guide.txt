@@ -1,0 +1,11 @@
+WALTER KNOLL FRONTEND STUDY — PROJECT GUIDE
+
+Independent educational recreation in HTML, CSS and vanilla JavaScript.
+Start: npm install, then npm run dev. Open http://localhost:4173.
+Ten pages: Home, About, Products, Chairs, Materials, Leathers,
+Magazine, Professionals, Sustainability, Retailers & Contact.
+Team areas: A Home/About; B Products/Chairs; C Materials/Leathers;
+D Magazine/Professionals; E Sustainability/Contact.
+Edit js/components/header.html and footer.html, then npm run sync:components.
+Source: https://www.walterknoll.info/en
+This study guide is not an official Walter Knoll product document.

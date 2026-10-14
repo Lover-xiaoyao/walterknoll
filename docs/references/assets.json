@@ -1,0 +1,514 @@
+[
+  {
+    "path": "assets/images/about/careers.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Verunreinigung_teaser_35d02fea52.jpg"
+  },
+  {
+    "path": "assets/images/about/history.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/about_our_history_navigational_image_jpg_b34fcebc3d.jpg"
+  },
+  {
+    "path": "assets/images/about/purpose.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Walter_Knoll_Brand_Space_Berlin_2021_001_tif_planning_hr_7500dc2f12.jpg"
+  },
+  {
+    "path": "assets/images/about/showrooms.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Walter_Knoll_Brand_Space_Duesseldorf_0001_16_9_b80da7b075.jpg"
+  },
+  {
+    "path": "assets/images/contact/headquarters.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Walter_Knoll_Headquarter_and_Showroom_Herrenberg_0009_3_2_9fc7b508dd.jpg"
+  },
+  {
+    "path": "assets/images/index/slide-0.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/DSC_09342_2_4feeed4e84.jpg"
+  },
+  {
+    "path": "assets/images/index/slide-1.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/DSC_09132_458584f2d2.jpg"
+  },
+  {
+    "path": "assets/images/index/slide-2.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/DSC_09071_df9f5bf5ae.jpg"
+  },
+  {
+    "path": "assets/images/index/slide-3.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Lo_C_b439f13873.jpg"
+  },
+  {
+    "path": "assets/images/index/slide-4.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/DSC_08907_2_4ed078e33e.jpg"
+  },
+  {
+    "path": "assets/images/index/slide-5.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/DSC_09208_2_a8fc87a13e.jpg"
+  },
+  {
+    "path": "assets/images/magazine/3daysofdesign-copenhagen-2026.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_260511_wk_3_DOD_26_Mag_1800x1200_14d703b0ee.jpg"
+  },
+  {
+    "path": "assets/images/magazine/apartment-376-albert-street-melbourne-australia.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Apartment_6_01_Melbourne_Australia_005_bebcf3ff30.jpg"
+  },
+  {
+    "path": "assets/images/magazine/fraport-terminal-3-frankfurt-germany.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_EP_04663_1019_jpg_23c5c08f05.jpg"
+  },
+  {
+    "path": "assets/images/magazine/materials-that-touch-us.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Mood_2020_Fabric_16_9_78415b9389.jpg"
+  },
+  {
+    "path": "assets/images/magazine/medical-center-usa.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Cleveland_Clinic_Cole_Eye_Institute_USA_009_3_2_13a5230bcb.jpg"
+  },
+  {
+    "path": "assets/images/magazine/news-milan-design-week-2026.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_New_Milan_f9f45c4846.jpg"
+  },
+  {
+    "path": "assets/images/magazine/retreat-park-am-see-nattika.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Retreat_Park_am_See_Nattika_2_png_71588013e9.jpg"
+  },
+  {
+    "path": "assets/images/magazine/sonderausstellung-bei-gaertner-hamburg.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_20260714_120000929_i_OS_64588bd8d0.jpg"
+  },
+  {
+    "path": "assets/images/magazine/the-best-of-wood.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Aion_Table_01_78e0004ea5.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1217-atlantic.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_Elen_1217_atlantic_9cf30e8693.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1218-cosy-grey.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_Elen_1218_cosy_grey_3febb85d7d.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1219-oyster.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_Elen_1219_oyster_e335772585.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1221-dark-brown.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1221_Elen_darkbrown_7a752e8f4a.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1222-coconut.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1222_Elen_coconut_dccb6223aa.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1225-cognac.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1225_Elen_cognac_ea1aa5d780.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1226-loam.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1226_Elen_loam_07fcc853b0.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1230-black.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1230_Elen_black_87ba811afe.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1380-toffee.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1380_Elen_toffee_cf5a2ecfc0.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1381-khaki.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1381_Elen_khaki_f5040b20ef.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1382-sahara.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1382_Elen_sahara_1be50dbf2f.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1390-ivory.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1390_Elen_ivory_ab20075079.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1401-tan.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1401_Elen_tan_79f78ab32d.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1403-mocca.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1403_Elen_mocca_15c17701b8.jpg"
+  },
+  {
+    "path": "assets/images/materials/elen-1406-taupe.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Leder_1406_Elen_taupe_9f933fbc1e.jpg"
+  },
+  {
+    "path": "assets/images/materials/fabrics.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Mood_Fabric_92127c6f28.jpg"
+  },
+  {
+    "path": "assets/images/materials/faq.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/FAQ_1_7d3569e441.jpg"
+  },
+  {
+    "path": "assets/images/materials/inspiration.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Inspiration_Mood_2020_003_master_dbb7e90b86.jpg"
+  },
+  {
+    "path": "assets/images/materials/leathers.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Mood_Leather_083d73af4c.jpg"
+  },
+  {
+    "path": "assets/images/materials/materials-in-use.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Material_in_Scene_6272cbd6c5.jpg"
+  },
+  {
+    "path": "assets/images/materials/other-surfaces.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Others_34f2ecb39b.jpg"
+  },
+  {
+    "path": "assets/images/materials/stones.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Marmormuster_jpg_3_2_1560063719.jpg"
+  },
+  {
+    "path": "assets/images/materials/woods.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Mood_Wood_cafeb27f66.jpg"
+  },
+  {
+    "path": "assets/images/products/375-barstool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_375_Barhocker_0006_tif_df0526b841.jpg"
+  },
+  {
+    "path": "assets/images/products/375-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_04_WK_375_Chair_Modell_1375_Dining_Chair_0007_H_tif_40f774f12e.jpg"
+  },
+  {
+    "path": "assets/images/products/Connector-X.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_Connector_X_geschlossen_tif_375bf69ab2.jpg"
+  },
+  {
+    "path": "assets/images/products/Ison-Bed.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Ison_Bed_005_tif_15ab43ad84.jpg"
+  },
+  {
+    "path": "assets/images/products/Leadchair-Executive-Soft.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_2005_Congress_253_FS_1_jpg_d76406e9a7.jpg"
+  },
+  {
+    "path": "assets/images/products/Leadchair-evo.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_Leadchair_Evo_01_jpg_ea9f01607e.jpg"
+  },
+  {
+    "path": "assets/images/products/Mono-V-Desk.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_1_2_DESK_7600_7694_1_USA_tif_8f32a5fe3c.jpg"
+  },
+  {
+    "path": "assets/images/products/Mono-V-Sideboard.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_1_4_MADIA_7650_tif_5ba535e0db.jpg"
+  },
+  {
+    "path": "assets/images/products/Osuu-Chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Foster_Chair_002_tif_99c7ad9b71.jpg"
+  },
+  {
+    "path": "assets/images/products/Yunity-evo.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_Yunity_Chair_01_jpg_3f9ce73592.jpg"
+  },
+  {
+    "path": "assets/images/products/amorin-table.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Amorin_Table_005_tif_7a89b12e3c.jpg"
+  },
+  {
+    "path": "assets/images/products/andoo-barstool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Andoo_Barhocker_0003_H_tif_5ea074e3bf.jpg"
+  },
+  {
+    "path": "assets/images/products/andoo-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Andoo_Chair_0007_tif_6362fa9890.jpg"
+  },
+  {
+    "path": "assets/images/products/ayabi-barstool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Ayabi_Chair_028_tif_c6e01f4154.jpg"
+  },
+  {
+    "path": "assets/images/products/ayabi-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Ayabi_Chair_001_tif_dab4e38c3f.jpg"
+  },
+  {
+    "path": "assets/images/products/bob-armchair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Bob_0023_H_tif_13a0973df7.jpg"
+  },
+  {
+    "path": "assets/images/products/category-accessories-stools.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_accessories_500d82e0b2.jpg"
+  },
+  {
+    "path": "assets/images/products/category-beds.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Jaan_0042_H_master_fddf7c8f58.jpg"
+  },
+  {
+    "path": "assets/images/products/category-carpets-carpet-pillows.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_carpet_faa58edd08.jpg"
+  },
+  {
+    "path": "assets/images/products/category-chairs-barstools.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_chair_9dd36f9f65.jpg"
+  },
+  {
+    "path": "assets/images/products/category-executive-desks.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Financial_Service_London_UK_003_master_11ca3e5703.jpg"
+  },
+  {
+    "path": "assets/images/products/category-lounge-chairs.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Shinzo_046_3_2_8e65986835.jpg"
+  },
+  {
+    "path": "assets/images/products/category-media-integration.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_media_0ed37ce48f.jpg"
+  },
+  {
+    "path": "assets/images/products/category-sofas-benches.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_Sofas_47414545ad.jpg"
+  },
+  {
+    "path": "assets/images/products/category-storage.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_the_farns_0f8a61e90e.jpg"
+  },
+  {
+    "path": "assets/images/products/category-tables.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_Table_3ac82d77df.jpg"
+  },
+  {
+    "path": "assets/images/products/cuoio-barstool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Cuoio_Barstool_001_tif_43c76b61b5.jpg"
+  },
+  {
+    "path": "assets/images/products/cuoio-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Cuoio_0025_tif_af31a75d5b.jpg"
+  },
+  {
+    "path": "assets/images/products/exec-v-desk.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Exec_V_rr_0034_H_tif_44d66454ce.jpg"
+  },
+  {
+    "path": "assets/images/products/fk-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_FK_0034_tif_cf3ad1b4d2.jpg"
+  },
+  {
+    "path": "assets/images/products/george-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_03_WK_George_0016_H_tif_0fe1a91073.jpg"
+  },
+  {
+    "path": "assets/images/products/ishino-stool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Ishino_0029_tif_b9577aea3c.jpg"
+  },
+  {
+    "path": "assets/images/products/jaan-bed.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Jaan_0036_H_tif_71478182f3.jpg"
+  },
+  {
+    "path": "assets/images/products/jaan-living-sofa.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Jaan_Living_0002_H_tif_c0539261f1.jpg"
+  },
+  {
+    "path": "assets/images/products/jason-lite-cantilever-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Jason_Lite_1900_0009_H_tif_1262990b4b.jpg"
+  },
+  {
+    "path": "assets/images/products/jason-lite-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Jason_Lite_1700_0005_1_master_tif_2d9c76c1c5.jpg"
+  },
+  {
+    "path": "assets/images/products/kesho-carpet.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Legends_of_carpets_Kesho_001_tif_f9124ed74c.jpg"
+  },
+  {
+    "path": "assets/images/products/kyo-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Kyo_0011_H_tif_e521ccb631.jpg"
+  },
+  {
+    "path": "assets/images/products/leadchair-executive.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Leadchair_0003_H_tif_79b06b7c37.jpg"
+  },
+  {
+    "path": "assets/images/products/leadchair-management-soft.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Leadchair_Management_Soft_001_tif_e0ec761b65.jpg"
+  },
+  {
+    "path": "assets/images/products/leadchair-management.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Leadchair_Management_2050_0002_H_tif_1cd12ff15c.jpg"
+  },
+  {
+    "path": "assets/images/products/liz-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Liz_0015_H_tif_00ced2c190.jpg"
+  },
+  {
+    "path": "assets/images/products/liz-m-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Liz_M_0009_tif_0c3e7e9f48.jpg"
+  },
+  {
+    "path": "assets/images/products/liz-wood-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Liz_Wood_0009_H_tif_5a147aa3ee.jpg"
+  },
+  {
+    "path": "assets/images/products/lox-barstool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Lox_0007_H_5e11344610.jpg"
+  },
+  {
+    "path": "assets/images/products/lox-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Lox_0018_tif_b1f5068b31.jpg"
+  },
+  {
+    "path": "assets/images/products/management-x.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Management_X_001_jpg_376d2873c2.jpg"
+  },
+  {
+    "path": "assets/images/products/management-x.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Management_X_001_jpg_376d2873c2.jpg"
+  },
+  {
+    "path": "assets/images/products/mawingu-carpet.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Legends_of_carpets_Mawingu_001_tif_e00fc789a1.jpg"
+  },
+  {
+    "path": "assets/images/products/molamisa-sofa.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Molamisa_001_tif_761f1c4c4c.jpg"
+  },
+  {
+    "path": "assets/images/products/rodolith-carpet.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Legends_of_carpets_Rodolith_001_tif_08a3e79bfa.jpg"
+  },
+  {
+    "path": "assets/images/products/saddle-barstool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Saddle_Chair_Barhocker_0001_H_tif_a9e2c641b0.jpg"
+  },
+  {
+    "path": "assets/images/products/saddle-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Saddle_Chair_0007_tif_d59a4366cf.jpg"
+  },
+  {
+    "path": "assets/images/products/samay-armchair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Samay_005_tif_7697e61b62.jpg"
+  },
+  {
+    "path": "assets/images/products/sheru-armchair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Sheru_089_tif_60f29342b4.jpg"
+  },
+  {
+    "path": "assets/images/products/sheru-barstool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Sheru_0078_master_tif_dbdee6bb2d.jpg"
+  },
+  {
+    "path": "assets/images/products/sheru-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Sheru_0017_tif_88d3ccc753.jpg"
+  },
+  {
+    "path": "assets/images/products/sheru-high-dining-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Sheru_0066_master_tif_1de717a1db.jpg"
+  },
+  {
+    "path": "assets/images/products/shinzo-hybrid-lounge-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Shinzo_Hybrid_001_tif_8bba67c711.jpg"
+  },
+  {
+    "path": "assets/images/products/sooso-side-table.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Sooso_001_tif_e18a03c9af.jpg"
+  },
+  {
+    "path": "assets/images/products/suti-table.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_Freisteller_Suti_Table_jpg_49f1da2cfd.jpg"
+  },
+  {
+    "path": "assets/images/products/tama-living-sofa.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Tama_Living_0032_tif_1d03ac7ad1.jpg"
+  },
+  {
+    "path": "assets/images/products/the-farns-sideboard-low.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_The_Farns_0012_tif_c7f2a499a1.jpg"
+  },
+  {
+    "path": "assets/images/products/together-bench.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Together_0003_H_tif_aad9536d68.jpg"
+  },
+  {
+    "path": "assets/images/products/together-corner-bench.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Together_0008_H_tif_65ac021719.jpg"
+  },
+  {
+    "path": "assets/images/products/turtle-barstool.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Turtle_Barstuhl_0002_H_tif_214793343e.jpg"
+  },
+  {
+    "path": "assets/images/products/turtle-chair.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Turtle_0002_H_tif_0dee67a5f5.jpg"
+  },
+  {
+    "path": "assets/images/products/yuuto-bed-nachttisch.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_01_WK_Yuuto_0023_H_tif_f7d68b8f30.jpg"
+  },
+  {
+    "path": "assets/images/products/yuuto-bedroom-bench.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Yuuto_0020_H_tif_84243ccb3a.jpg"
+  },
+  {
+    "path": "assets/images/products/yuuto-console.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/large_WK_Yuuto_0022_H_tif_06d6b91b58.jpg"
+  },
+  {
+    "path": "assets/images/professionals/campus-of-competence.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Campusof_Competence_Visual_V4_8f460b73bd.jpg"
+  },
+  {
+    "path": "assets/images/professionals/contact.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Milan_Designweek_2023_046_jpg_c961c0f8e1.jpg"
+  },
+  {
+    "path": "assets/images/professionals/content-kits.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Key_Visual_Milan_5be2a37e93.jpg"
+  },
+  {
+    "path": "assets/images/professionals/downloads.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/i_Stock_184141620_6778b1fd1d.jpg"
+  },
+  {
+    "path": "assets/images/professionals/pcon.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/professionals_pcon_Tools_navigational_image_jpg_589ab5535c.jpg"
+  },
+  {
+    "path": "assets/images/professionals/press.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Mock_up_jpg_3_2_8771e41b78.jpg"
+  },
+  {
+    "path": "assets/images/professionals/projects.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/WK_Landesmuseum_Baden_Wuerttemberg_Stuttgart_Germany_004_16_9_7cfef4a8e4.jpg"
+  },
+  {
+    "path": "assets/images/professionals/showrooms.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Walter_Knoll_Brand_Space_Berlin_2021_001_tif_3_2_aad1550a9c.jpg"
+  },
+  {
+    "path": "assets/images/sustainability/section-3.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/evo_Principles_c1b07e0ace.jpg"
+  },
+  {
+    "path": "assets/images/sustainability/section-4.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Haltung_Herkunft3_f948edd35d.jpg"
+  },
+  {
+    "path": "assets/images/sustainability/section-5.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Umweltmanagementsystem_5c649c4e71.jpg"
+  },
+  {
+    "path": "assets/images/sustainability/section-6.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Production_Sourcing2_48556589b8.jpg"
+  },
+  {
+    "path": "assets/images/sustainability/section-7.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/ESG_5fb031b5b5.jpg"
+  },
+  {
+    "path": "assets/images/sustainability/section-8.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/Support_30acfde8e4.jpg"
+  },
+  {
+    "path": "assets/images/sustainability/section-9.jpg",
+    "url": "https://wk-prod-assets.s3.eu-central-1.amazonaws.com/evo_concept_6dce8b8e63.jpg"
+  }
+]

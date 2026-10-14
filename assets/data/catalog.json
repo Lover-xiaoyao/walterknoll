@@ -1,0 +1,778 @@
+{
+  "products": [
+    {
+      "id": "ayabi-chair",
+      "name": "Ayabi Chair",
+      "category": "chairs-barstools",
+      "designer": "Dai Sugasawa",
+      "image": "assets/images/products/ayabi-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/ayabi-chair"
+    },
+    {
+      "id": "ayabi-barstool",
+      "name": "Ayabi Barstool",
+      "category": "chairs-barstools",
+      "designer": "Dai Sugasawa",
+      "image": "assets/images/products/ayabi-barstool.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/ayabi-barstool"
+    },
+    {
+      "id": "cuoio-barstool",
+      "name": "Cuoio Barstool",
+      "category": "chairs-barstools",
+      "designer": "EOOS",
+      "image": "assets/images/products/cuoio-barstool.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/cuoio-barstool"
+    },
+    {
+      "id": "Leadchair-evo",
+      "name": "Leadchair evo",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/Leadchair-evo.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/Leadchair-evo"
+    },
+    {
+      "id": "Yunity-evo",
+      "name": "Yunity evo",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/Yunity-evo.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/Yunity-evo"
+    },
+    {
+      "id": "Osuu-Chair",
+      "name": "Osuu Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/Osuu-Chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/Osuu-Chair"
+    },
+    {
+      "id": "sheru-high-dining-chair",
+      "name": "Sheru High Dining chAIR",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/sheru-high-dining-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/sheru-high-dining-chair"
+    },
+    {
+      "id": "sheru-chair",
+      "name": "Sheru chAIR",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/sheru-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/sheru-chair"
+    },
+    {
+      "id": "sheru-barstool",
+      "name": "Sheru Barstool",
+      "category": "chairs-barstools",
+      "designer": "EOOS",
+      "image": "assets/images/products/sheru-barstool.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/sheru-barstool"
+    },
+    {
+      "id": "Leadchair-Executive-Soft",
+      "name": "Leadchair Executive Soft",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/Leadchair-Executive-Soft.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/Leadchair-Executive-Soft"
+    },
+    {
+      "id": "kyo-chair",
+      "name": "Kyo Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/kyo-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/kyo-chair"
+    },
+    {
+      "id": "liz-chair",
+      "name": "Liz Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/liz-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/liz-chair"
+    },
+    {
+      "id": "liz-wood-chair",
+      "name": "Liz Wood Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/liz-wood-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/liz-wood-chair"
+    },
+    {
+      "id": "liz-m-chair",
+      "name": "Liz-M Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/liz-m-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/liz-m-chair"
+    },
+    {
+      "id": "leadchair-management-soft",
+      "name": "Leadchair Management Soft",
+      "category": "chairs-barstools",
+      "designer": "EOOS",
+      "image": "assets/images/products/leadchair-management-soft.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/leadchair-management-soft"
+    },
+    {
+      "id": "leadchair-executive",
+      "name": "Leadchair Executive",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/leadchair-executive.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/leadchair-executive"
+    },
+    {
+      "id": "leadchair-management",
+      "name": "Leadchair Management",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/leadchair-management.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/leadchair-management"
+    },
+    {
+      "id": "jason-lite-chair",
+      "name": "Jason Lite Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/jason-lite-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/jason-lite-chair"
+    },
+    {
+      "id": "george-chair",
+      "name": "George Cantilever Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/george-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/george-chair"
+    },
+    {
+      "id": "jason-lite-cantilever-chair",
+      "name": "Jason Lite Cantilever Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/jason-lite-cantilever-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/jason-lite-cantilever-chair"
+    },
+    {
+      "id": "cuoio-chair",
+      "name": "Cuoio Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/cuoio-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/cuoio-chair"
+    },
+    {
+      "id": "fk-chair",
+      "name": "FK Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/fk-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/fk-chair"
+    },
+    {
+      "id": "andoo-chair",
+      "name": "Andoo Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/andoo-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/andoo-chair"
+    },
+    {
+      "id": "andoo-barstool",
+      "name": "Andoo Barstool",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/andoo-barstool.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/andoo-barstool"
+    },
+    {
+      "id": "375-chair",
+      "name": "375 Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/375-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/375-chair"
+    },
+    {
+      "id": "375-barstool",
+      "name": "375 Barstool",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/375-barstool.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/375-barstool"
+    },
+    {
+      "id": "lox-chair",
+      "name": "Lox Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/lox-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/lox-chair"
+    },
+    {
+      "id": "lox-barstool",
+      "name": "Lox Barstool",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/lox-barstool.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/lox-barstool"
+    },
+    {
+      "id": "turtle-chair",
+      "name": "Turtle Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/turtle-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/turtle-chair"
+    },
+    {
+      "id": "turtle-barstool",
+      "name": "Turtle Barstool",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/turtle-barstool.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/turtle-barstool"
+    },
+    {
+      "id": "saddle-chair",
+      "name": "Saddle Chair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/saddle-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/saddle-chair"
+    },
+    {
+      "id": "saddle-barstool",
+      "name": "Saddle Barstool",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/saddle-barstool.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/saddle-barstool"
+    },
+    {
+      "id": "together-bench",
+      "name": "Together Bench",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/together-bench.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/together-bench"
+    },
+    {
+      "id": "together-corner-bench",
+      "name": "Together Corner Bench",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/together-corner-bench.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/together-corner-bench"
+    },
+    {
+      "id": "bob-armchair",
+      "name": "Bob Armchair",
+      "category": "chairs-barstools",
+      "designer": null,
+      "image": "assets/images/products/bob-armchair.jpg",
+      "url": "https://www.walterknoll.info/en/products/chairs-barstools/bob-armchair"
+    },
+    {
+      "id": "samay-armchair",
+      "name": "Samay Armchair",
+      "category": "lounge-chairs",
+      "designer": "EOOS",
+      "image": "assets/images/products/samay-armchair.jpg",
+      "url": "https://www.walterknoll.info/en/products/lounge-chairs/samay-armchair"
+    },
+    {
+      "id": "shinzo-hybrid-lounge-chair",
+      "name": "Shinzo Hybrid Lounge Chair",
+      "category": "lounge-chairs",
+      "designer": null,
+      "image": "assets/images/products/shinzo-hybrid-lounge-chair.jpg",
+      "url": "https://www.walterknoll.info/en/products/lounge-chairs/shinzo-hybrid-lounge-chair"
+    },
+    {
+      "id": "sheru-armchair",
+      "name": "Sheru Armchair",
+      "category": "lounge-chairs",
+      "designer": null,
+      "image": "assets/images/products/sheru-armchair.jpg",
+      "url": "https://www.walterknoll.info/en/products/lounge-chairs/sheru-armchair"
+    },
+    {
+      "id": "molamisa-sofa",
+      "name": "Molamisa Sofa",
+      "category": "sofas-benches",
+      "designer": null,
+      "image": "assets/images/products/molamisa-sofa.jpg",
+      "url": "https://www.walterknoll.info/en/products/sofas-benches/molamisa-sofa"
+    },
+    {
+      "id": "tama-living-sofa",
+      "name": "Tama Living Sofa",
+      "category": "sofas-benches",
+      "designer": null,
+      "image": "assets/images/products/tama-living-sofa.jpg",
+      "url": "https://www.walterknoll.info/en/products/sofas-benches/tama-living-sofa"
+    },
+    {
+      "id": "jaan-living-sofa",
+      "name": "Jaan Living Sofa",
+      "category": "sofas-benches",
+      "designer": null,
+      "image": "assets/images/products/jaan-living-sofa.jpg",
+      "url": "https://www.walterknoll.info/en/products/sofas-benches/jaan-living-sofa"
+    },
+    {
+      "id": "amorin-table",
+      "name": "Amorin Table",
+      "category": "tables",
+      "designer": "Wolfgang C. R. Mezger",
+      "image": "assets/images/products/amorin-table.jpg",
+      "url": "https://www.walterknoll.info/en/products/tables/amorin-table"
+    },
+    {
+      "id": "suti-table",
+      "name": "Suti Table",
+      "category": "tables",
+      "designer": "Walter Knoll Team",
+      "image": "assets/images/products/suti-table.jpg",
+      "url": "https://www.walterknoll.info/en/products/tables/suti-table"
+    },
+    {
+      "id": "sooso-side-table",
+      "name": "Sooso Side Table",
+      "category": "tables",
+      "designer": null,
+      "image": "assets/images/products/sooso-side-table.jpg",
+      "url": "https://www.walterknoll.info/en/products/tables/sooso-side-table"
+    },
+    {
+      "id": "management-x",
+      "name": "Management-X",
+      "category": "executive-desks",
+      "designer": "Walter Knoll Team",
+      "image": "assets/images/products/management-x.jpg",
+      "url": "https://www.walterknoll.info/en/products/executive-desks/management-x"
+    },
+    {
+      "id": "Mono-V-Desk",
+      "name": "Mono-V Desk",
+      "category": "executive-desks",
+      "designer": null,
+      "image": "assets/images/products/Mono-V-Desk.jpg",
+      "url": "https://www.walterknoll.info/en/products/executive-desks/Mono-V-Desk"
+    },
+    {
+      "id": "exec-v-desk",
+      "name": "Exec-V Desk",
+      "category": "executive-desks",
+      "designer": null,
+      "image": "assets/images/products/exec-v-desk.jpg",
+      "url": "https://www.walterknoll.info/en/products/executive-desks/exec-v-desk"
+    },
+    {
+      "id": "Connector-X",
+      "name": "Connector-X",
+      "category": "media-integration",
+      "designer": "EOOS",
+      "image": "assets/images/products/Connector-X.jpg",
+      "url": "https://www.walterknoll.info/en/products/media-integration/Connector-X"
+    },
+    {
+      "id": "management-x",
+      "name": "Management-X",
+      "category": "storage",
+      "designer": "Walter Knoll Team",
+      "image": "assets/images/products/management-x.jpg",
+      "url": "https://www.walterknoll.info/en/products/storage/management-x"
+    },
+    {
+      "id": "Mono-V-Sideboard",
+      "name": "Mono-V Sideboard",
+      "category": "storage",
+      "designer": null,
+      "image": "assets/images/products/Mono-V-Sideboard.jpg",
+      "url": "https://www.walterknoll.info/en/products/storage/Mono-V-Sideboard"
+    },
+    {
+      "id": "the-farns-sideboard-low",
+      "name": "The Farns Sideboard Low",
+      "category": "storage",
+      "designer": null,
+      "image": "assets/images/products/the-farns-sideboard-low.jpg",
+      "url": "https://www.walterknoll.info/en/products/storage/the-farns-sideboard-low"
+    },
+    {
+      "id": "mawingu-carpet",
+      "name": "Mawingu Carpet",
+      "category": "carpets-carpet-pillows",
+      "designer": "Helmut Scheufele",
+      "image": "assets/images/products/mawingu-carpet.jpg",
+      "url": "https://www.walterknoll.info/en/products/carpets-carpet-pillows/mawingu-carpet"
+    },
+    {
+      "id": "rodolith-carpet",
+      "name": "Rodolith Carpet",
+      "category": "carpets-carpet-pillows",
+      "designer": "Helmut Scheufele",
+      "image": "assets/images/products/rodolith-carpet.jpg",
+      "url": "https://www.walterknoll.info/en/products/carpets-carpet-pillows/rodolith-carpet"
+    },
+    {
+      "id": "kesho-carpet",
+      "name": "Kesho Carpet",
+      "category": "carpets-carpet-pillows",
+      "designer": "Helmut Scheufele",
+      "image": "assets/images/products/kesho-carpet.jpg",
+      "url": "https://www.walterknoll.info/en/products/carpets-carpet-pillows/kesho-carpet"
+    },
+    {
+      "id": "ishino-stool",
+      "name": "Ishino Stool",
+      "category": "accessories-stools",
+      "designer": "Dai Sugasawa",
+      "image": "assets/images/products/ishino-stool.jpg",
+      "url": "https://www.walterknoll.info/en/products/accessories-stools/ishino-stool"
+    },
+    {
+      "id": "yuuto-bed-nachttisch",
+      "name": "Yuuto Side Table",
+      "category": "accessories-stools",
+      "designer": null,
+      "image": "assets/images/products/yuuto-bed-nachttisch.jpg",
+      "url": "https://www.walterknoll.info/en/products/accessories-stools/yuuto-bed-nachttisch"
+    },
+    {
+      "id": "yuuto-console",
+      "name": "Yuuto Console",
+      "category": "accessories-stools",
+      "designer": null,
+      "image": "assets/images/products/yuuto-console.jpg",
+      "url": "https://www.walterknoll.info/en/products/accessories-stools/yuuto-console"
+    },
+    {
+      "id": "Ison-Bed",
+      "name": "Ison Bed",
+      "category": "beds",
+      "designer": "EOOS",
+      "image": "assets/images/products/Ison-Bed.jpg",
+      "url": "https://www.walterknoll.info/en/products/beds/Ison-Bed"
+    },
+    {
+      "id": "jaan-bed",
+      "name": "Jaan Bed",
+      "category": "beds",
+      "designer": null,
+      "image": "assets/images/products/jaan-bed.jpg",
+      "url": "https://www.walterknoll.info/en/products/beds/jaan-bed"
+    },
+    {
+      "id": "yuuto-bedroom-bench",
+      "name": "Yuuto Bedroom Bench",
+      "category": "beds",
+      "designer": null,
+      "image": "assets/images/products/yuuto-bedroom-bench.jpg",
+      "url": "https://www.walterknoll.info/en/products/beds/yuuto-bedroom-bench"
+    }
+  ],
+  "categories": [
+    {
+      "id": "chairs-barstools",
+      "name": "Chairs & Barstools",
+      "image": "assets/images/products/category-chairs-barstools.jpg"
+    },
+    {
+      "id": "lounge-chairs",
+      "name": "Lounge Chairs",
+      "image": "assets/images/products/category-lounge-chairs.jpg"
+    },
+    {
+      "id": "sofas-benches",
+      "name": "Sofas & Benches",
+      "image": "assets/images/products/category-sofas-benches.jpg"
+    },
+    {
+      "id": "tables",
+      "name": "Tables",
+      "image": "assets/images/products/category-tables.jpg"
+    },
+    {
+      "id": "executive-desks",
+      "name": "Executive Desks",
+      "image": "assets/images/products/category-executive-desks.jpg"
+    },
+    {
+      "id": "media-integration",
+      "name": "Media Integration",
+      "image": "assets/images/products/category-media-integration.jpg"
+    },
+    {
+      "id": "storage",
+      "name": "Storage",
+      "image": "assets/images/products/category-storage.jpg"
+    },
+    {
+      "id": "carpets-carpet-pillows",
+      "name": "Carpets & Carpet Pillows",
+      "image": "assets/images/products/category-carpets-carpet-pillows.jpg"
+    },
+    {
+      "id": "accessories-stools",
+      "name": "Accessories & Stools",
+      "image": "assets/images/products/category-accessories-stools.jpg"
+    },
+    {
+      "id": "beds",
+      "name": "Beds",
+      "image": "assets/images/products/category-beds.jpg"
+    }
+  ],
+  "leathers": [
+    {
+      "id": "elen-1217-atlantic",
+      "name": "1217 atlantic",
+      "image": "assets/images/materials/elen-1217-atlantic.jpg"
+    },
+    {
+      "id": "elen-1218-cosy-grey",
+      "name": "1218 cosy grey",
+      "image": "assets/images/materials/elen-1218-cosy-grey.jpg"
+    },
+    {
+      "id": "elen-1219-oyster",
+      "name": "1219 oyster",
+      "image": "assets/images/materials/elen-1219-oyster.jpg"
+    },
+    {
+      "id": "elen-1221-dark-brown",
+      "name": "1221 dark brown",
+      "image": "assets/images/materials/elen-1221-dark-brown.jpg"
+    },
+    {
+      "id": "elen-1222-coconut",
+      "name": "1222 coconut",
+      "image": "assets/images/materials/elen-1222-coconut.jpg"
+    },
+    {
+      "id": "elen-1225-cognac",
+      "name": "1225 cognac",
+      "image": "assets/images/materials/elen-1225-cognac.jpg"
+    },
+    {
+      "id": "elen-1226-loam",
+      "name": "1226 loam",
+      "image": "assets/images/materials/elen-1226-loam.jpg"
+    },
+    {
+      "id": "elen-1230-black",
+      "name": "1230 black",
+      "image": "assets/images/materials/elen-1230-black.jpg"
+    },
+    {
+      "id": "elen-1380-toffee",
+      "name": "1380 toffee",
+      "image": "assets/images/materials/elen-1380-toffee.jpg"
+    },
+    {
+      "id": "elen-1381-khaki",
+      "name": "1381 khaki",
+      "image": "assets/images/materials/elen-1381-khaki.jpg"
+    },
+    {
+      "id": "elen-1382-sahara",
+      "name": "1382 sahara",
+      "image": "assets/images/materials/elen-1382-sahara.jpg"
+    },
+    {
+      "id": "elen-1390-ivory",
+      "name": "1390 ivory",
+      "image": "assets/images/materials/elen-1390-ivory.jpg"
+    },
+    {
+      "id": "elen-1401-tan",
+      "name": "1401 tan",
+      "image": "assets/images/materials/elen-1401-tan.jpg"
+    },
+    {
+      "id": "elen-1403-mocca",
+      "name": "1403 mocca",
+      "image": "assets/images/materials/elen-1403-mocca.jpg"
+    },
+    {
+      "id": "elen-1406-taupe",
+      "name": "1406 taupe",
+      "image": "assets/images/materials/elen-1406-taupe.jpg"
+    }
+  ],
+  "articles": [
+    {
+      "id": "sonderausstellung-bei-gaertner-hamburg",
+      "title": "Special Exhibition at gärtner, Hamburg",
+      "category": "News",
+      "image": "assets/images/magazine/sonderausstellung-bei-gaertner-hamburg.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/sonderausstellung-bei-gaertner-hamburg"
+    },
+    {
+      "id": "retreat-park-am-see-nattika",
+      "title": "Retreat Park am See Nattika, Penzlin, Germany",
+      "category": "References",
+      "image": "assets/images/magazine/retreat-park-am-see-nattika.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/retreat-park-am-see-nattika"
+    },
+    {
+      "id": "fraport-terminal-3-frankfurt-germany",
+      "title": "Terminal 3, Frankfurt Airport, Germany",
+      "category": "References",
+      "image": "assets/images/magazine/fraport-terminal-3-frankfurt-germany.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/fraport-terminal-3-frankfurt-germany"
+    },
+    {
+      "id": "medical-center-usa",
+      "title": "Medical Center in the U.S.",
+      "category": "References",
+      "image": "assets/images/magazine/medical-center-usa.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/medical-center-usa"
+    },
+    {
+      "id": "apartment-376-albert-street-melbourne-australia",
+      "title": "Apartment 376 Albert Street, Melbourne, Australia",
+      "category": "Stories",
+      "image": "assets/images/magazine/apartment-376-albert-street-melbourne-australia.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/apartment-376-albert-street-melbourne-australia"
+    },
+    {
+      "id": "the-best-of-wood",
+      "title": "The Best of Wood",
+      "category": "Stories",
+      "image": "assets/images/magazine/the-best-of-wood.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/the-best-of-wood"
+    },
+    {
+      "id": "materials-that-touch-us",
+      "title": "Materials that touch us",
+      "category": "Stories",
+      "image": "assets/images/magazine/materials-that-touch-us.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/materials-that-touch-us"
+    },
+    {
+      "id": "3daysofdesign-copenhagen-2026",
+      "title": "3 days of design - Copenhagen 2026",
+      "category": "News",
+      "image": "assets/images/magazine/3daysofdesign-copenhagen-2026.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/3daysofdesign-copenhagen-2026"
+    },
+    {
+      "id": "news-milan-design-week-2026",
+      "title": "News Milan Design Week 2026",
+      "category": "News",
+      "image": "assets/images/magazine/news-milan-design-week-2026.jpg",
+      "url": "https://www.walterknoll.info/en/magazine/news-milan-design-week-2026"
+    }
+  ],
+  "stores": [
+    {
+      "name": "Walter K. Inc",
+      "street": "1140 Broadway Suite 504",
+      "zip": "10001",
+      "city": "New York City",
+      "phone": "+1 917 972 3470",
+      "email": "info@walter-k.com",
+      "lat": 40.7439,
+      "lng": -73.988677
+    },
+    {
+      "name": "Walter Knoll Australia LP Showroom Adelaide P.O. Box 305",
+      "street": "13 Rundle Road",
+      "zip": "5106",
+      "city": "Salisbury South",
+      "phone": "+61 8 81823925",
+      "email": null,
+      "lat": -34.784848077225966,
+      "lng": 138.64680281833438
+    },
+    {
+      "name": "Walter Knoll AG & Co. KG Showroom London",
+      "street": "Charterhouse Square 42",
+      "zip": "EC1M 6EA",
+      "city": "London",
+      "phone": "+44 2077 965950",
+      "email": "james.charles-edwards@walterknoll.de",
+      "lat": 51.52043944266277,
+      "lng": -0.09881339985660995
+    },
+    {
+      "name": "Walter Knoll AG & Co. KG Showroom Berlin",
+      "street": "Einsteinufer 63a",
+      "zip": "10587",
+      "city": "Berlin",
+      "phone": null,
+      "email": null,
+      "lat": 52.51818168491928,
+      "lng": 13.320866945547154
+    },
+    {
+      "name": "Walter Knoll AG & Co. KG Showroom Kuala Lumpur",
+      "street": "A1-6-1,, Arcoris Business Suites,, Jalan Kiara, Mont Kiara",
+      "zip": "50480",
+      "city": "Kuala Lumpur",
+      "phone": "+60 12 2360386",
+      "email": null,
+      "lat": 3.16588,
+      "lng": 101.65279
+    },
+    {
+      "name": "Walter Knoll AG Showroom Zürich",
+      "street": "Industriestrasse 39b",
+      "zip": "8304",
+      "city": "Wallisellen",
+      "phone": "+41 41 728 67 12",
+      "email": "zuerich@walterknoll.ch",
+      "lat": 47.411548,
+      "lng": 8.589169
+    }
+  ],
+  "slides": [
+    {
+      "image": "assets/images/index/slide-0.jpg",
+      "title": "Ayabi Chair.",
+      "subtitle": "Design: Dai Sugasawa.",
+      "category": "chairs-barstools"
+    },
+    {
+      "image": "assets/images/index/slide-1.jpg",
+      "title": "Amorin Table.",
+      "subtitle": "Design: Wolfgang C. R. Mezger.",
+      "category": "tables"
+    },
+    {
+      "image": "assets/images/index/slide-2.jpg",
+      "title": "Molamisa Sofa.",
+      "subtitle": "Design: EOOS.",
+      "category": "sofas-benches"
+    },
+    {
+      "image": "assets/images/index/slide-3.jpg",
+      "title": "Legends of Carpets.",
+      "subtitle": "Design: Helmut Scheufele.",
+      "category": "carpets-carpet-pillows"
+    },
+    {
+      "image": "assets/images/index/slide-4.jpg",
+      "title": "Aion Table.",
+      "subtitle": "Design: Foster + Partners Industrial Design.",
+      "category": "tables"
+    },
+    {
+      "image": "assets/images/index/slide-5.jpg",
+      "title": "Samay Armchair.",
+      "subtitle": "Design: EOOS.",
+      "category": "lounge-chairs"
+    }
+  ]
+}
