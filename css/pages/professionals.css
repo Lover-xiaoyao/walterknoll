@@ -1,14 +1,3 @@
-/* ================================================================
-   pages/professionals.css —— 【Professionals】页面独有样式
-   ----------------------------------------------------------------
-   负责人：成员 D
-
-   ⚠️ 只写这一页独有的样式。导航、页脚、按钮、卡片这些公共的【别在这重复写】：
-        css/layout.css      → 容器、导航、页脚、抽屉
-        css/components.css  → 按钮、卡片、面包屑、分页器、标签页
-
-   断点沿用全站四档：1700 / 1199 / 859 / 479
-   ================================================================ */
-
-/* 页面标题区（默认样式在 layout.css 的 .page-head，想改就取消下面注释） */
-/* .page-head h1 { font-size: 56px; line-height: 64px; } */
+/* D: services, downloadable study documents and official resource links. */
+.professional-hero{margin-top:0}.professional-hero img{aspect-ratio:2.8;object-fit:cover}.service-card{border-top:1px solid var(--line);padding:28px 0;position:relative}.service-card>svg{width:32px;height:32px;margin-bottom:24px}.service-card h3{font-size:25px;letter-spacing:-.03em}.service-card p{margin-top:16px;font-size:14px;color:var(--muted);max-width:230px}.service-card>span{display:block;margin-top:24px;font-size:23px}.service-card:hover>span{transform:translateX(5px)}.professional-notes>article{padding-top:32px;border-top:1px solid var(--line)}.professional-notes h2{font-size:38px}
+@media(max-width:599px){.professional-hero img{aspect-ratio:1.5}.service-card h3{font-size:23px}.service-card p{font-size:13px}.service-card{padding-top:24px}.service-grid{gap:30px 24px}}

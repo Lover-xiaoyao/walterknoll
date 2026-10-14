@@ -3,180 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Walter Knoll — About us</title>
-
-  <!-- 样式四层，顺序不能乱 -->
+  <meta name="description" content="An independent educational recreation of Walter Knoll — About us.">
+  <title>About us | Walter Knoll — Frontend Study</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages/about.css">
 </head>
-<body>
-
-  <!-- ===== 公共导航 =====
-       与 js/components/header.html 一致
-       ⚠️ 内页【不要】加 on-hero（那是首页专用的） -->
+<body data-page="about">
+<!-- shared:header:start -->
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" id="siteHeader">
-  <div class="header-inner">
-
-    <a class="logo" href="../index.html" aria-label="Walter Knoll">
-      <img class="logo-black" src="../assets/images/common/logo-black.svg" alt="Walter Knoll">
-      <img class="logo-white" src="../assets/images/common/logo-white.svg" alt="Walter Knoll">
-    </a>
-
-    <!-- 导航项与真站一致（真站首页一级栏目就是这 10 个） -->
-    <nav class="nav">
-      <a class="nav-item" href="products.html">Products</a>
-      <a class="nav-item" href="materials.html">Material Library</a>
-      <a class="nav-item" href="magazine.html">Magazine</a>
-      <a class="nav-item" href="#">Designers</a>
-      <a class="nav-item" href="professionals.html">Professionals</a>
-      <a class="nav-item" href="about.html">About us</a>
-      <a class="nav-item" href="sustainability.html">Sustainability</a>
-      <a class="nav-item" href="contact.html">Retailers</a>
-      <a class="nav-item" href="#">Downloads</a>
-      <a class="nav-item" href="contact.html">Contact</a>
-    </nav>
-
-    <div class="header-tools">
-      <span class="tool-btn">EN</span>
-      <button class="tool-btn" aria-label="Search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-          <circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path>
-        </svg>
-      </button>
-      <button class="tool-btn nav-toggle" id="navToggle" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-          <path d="M3 6h18M3 12h18M3 18h18"></path>
-        </svg>
-      </button>
-    </div>
-
+  <button class="icon-button menu-toggle" type="button" aria-label="Open menu" aria-controls="menuDialog" aria-expanded="false" data-open="menuDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/></svg></button>
+  <a class="logo" href="../index.html" aria-label="Walter Knoll — Home"><img src="../assets/images/common/logo-black.svg" alt="Walter Knoll" width="154" height="25"></a>
+  <nav class="primary-nav" aria-label="Main navigation">
+    <a href="../pages/products.html" data-nav="products">Products</a>
+    <a href="../pages/materials.html" data-nav="materials">Material Library</a>
+    <a href="../pages/magazine.html" data-nav="magazine">Magazine</a>
+    <a href="../pages/about.html#designers" data-nav="designers">Designers</a>
+    <a href="../pages/professionals.html" data-nav="professionals">Professionals</a>
+    <a href="../pages/about.html" data-nav="about">About us</a>
+    <a href="../pages/sustainability.html" data-nav="sustainability">Sustainability</a>
+  </nav>
+  <div class="header-tools">
+    <button class="icon-button" type="button" aria-label="Search" data-open="searchDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg></button>
+    <button class="icon-button" type="button" aria-label="Wish list" data-open="wishlistDialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"/></svg><span class="wish-count" hidden></span></button>
+    <a class="utility-link" href="../pages/contact.html#retailers">Retailers</a>
+    <a class="utility-link" href="../pages/professionals.html#downloads">Downloads</a>
+    <a class="utility-link" href="../pages/contact.html#contact">Contact</a>
+    <a class="icon-button mobile-contact" href="../pages/contact.html" aria-label="Retailers and contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
+    <span class="language" title="English">EN</span>
   </div>
 </header>
+<dialog class="menu-dialog" id="menuDialog" aria-labelledby="menuTitle">
+  <div class="dialog-top"><span id="menuTitle">Explore Walter Knoll</span><button class="icon-button" type="button" aria-label="Close menu" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
+  <nav class="drawer-nav" aria-label="Mobile navigation">
+    <a href="../pages/products.html">Products <span>→</span></a>
+    <a href="../pages/materials.html">Material Library <span>→</span></a>
+    <a href="../pages/magazine.html">Magazine <span>→</span></a>
+    <a href="../pages/about.html#designers">Designers <span>→</span></a>
+    <a href="../pages/professionals.html">Professionals <span>→</span></a>
+    <a href="../pages/about.html">About us <span>→</span></a>
+    <a href="../pages/sustainability.html">Sustainability <span>→</span></a>
+    <a href="../pages/contact.html#retailers">Retailers <span>→</span></a>
+    <a href="../pages/professionals.html#downloads">Downloads <span>→</span></a>
+    <a href="../pages/contact.html#contact">Contact <span>→</span></a>
+  </nav>
+</dialog>
+<dialog class="search-dialog" id="searchDialog" aria-labelledby="searchTitle">
+  <div class="dialog-top"><h2 id="searchTitle">Find your inspiration.</h2><button class="icon-button" type="button" aria-label="Close search" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
+  <label class="search-field"><span class="sr-only">Search products, materials and stories</span><input id="siteSearch" type="search" placeholder="Search products, materials and stories…" autocomplete="off"></label>
+  <p class="small muted" id="searchSummary" role="status">Explore the collection or enter a search term.</p>
+  <div id="searchResults" class="search-results"></div>
+</dialog>
+<dialog class="content-dialog" id="wishlistDialog" aria-labelledby="wishlistTitle">
+  <div class="dialog-top"><h2 id="wishlistTitle">Your wish list.</h2><button class="icon-button" type="button" aria-label="Close wish list" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
+  <div id="wishlistContent"></div>
+</dialog>
+<dialog class="content-dialog" id="detailDialog" aria-labelledby="detailTitle"><button class="icon-button detail-close" type="button" aria-label="Close detail" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button><div id="detailContent"></div></dialog>
 
-<!-- 手机端抽屉菜单（跟着上面那段一起复制） -->
-<div class="drawer" id="drawer">
-  <button class="drawer-close" id="drawerClose" aria-label="Close">&times;</button>
-  <a class="drawer-item" href="products.html">Products</a>
-  <a class="drawer-item" href="materials.html">Material Library</a>
-  <a class="drawer-item" href="magazine.html">Magazine</a>
-  <a class="drawer-item" href="#">Designers</a>
-  <a class="drawer-item" href="professionals.html">Professionals</a>
-  <a class="drawer-item" href="about.html">About us</a>
-  <a class="drawer-item" href="sustainability.html">Sustainability</a>
-  <a class="drawer-item" href="contact.html">Retailers</a>
-  <a class="drawer-item" href="#">Downloads</a>
-  <a class="drawer-item" href="contact.html">Contact</a>
-</div>
-
-  <!-- ============================================================
-       本页主内容 —— 【成员 A】负责
-       把 <main> 里的东西换成这一页要做的模块
-       ============================================================ -->
-  <main class="page-main">
-
-    <!-- 页面标题区（可以保留，也可以改） -->
-    <section class="page-head container">
-      <h1>About us</h1>
-      <p class="desc">本页由【成员 A】负责。把 &lt;main&gt; 里的内容换成这一页的模块。</p>
-    </section>
-
-    <!-- ↓↓↓ 你的内容写在这里 ↓↓↓ -->
-
-
-    <!-- ↑↑↑ 你的内容写在这里 ↑↑↑ -->
-
-  </main>
-
-  <!-- ===== 公共页脚 =====
-       与 js/components/footer.html 一致 -->
+<!-- shared:header:end -->
+<main id="main">
+<section class="page-head container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">›</span><span aria-current="page">About us</span></nav><h1>About us</h1><p class="lead">Furniture shapes the way we live. Discover a heritage of design and craftsmanship, from Stuttgart to the world.</p></section><div class="container"><nav class="subnav" aria-label="About sections"><a href="#purpose">Our Purpose</a><a href="#history">Our History</a><a href="#designers">Our Designers</a><a href="contact.html#retailers">Showrooms</a></nav></div><section class="container split-section section" id="purpose"><div class="split-image"><img class="" src="../assets/images/about/purpose.jpg" alt="Walter Knoll Brand Space" loading="lazy"></div><div><p class="eyebrow">Our Purpose</p><h2>Spaces for people.<br>Design for life.</h2><p class="body-copy">From a quiet moment at home to a conversation at work, furniture becomes part of everyday life. Our study explores the modern forms, natural materials and careful details that define Walter Knoll.</p><a class="arrow-link" href="materials.html">Explore our materials <span aria-hidden="true">→</span></a></div></section><section class="container section" id="history"><div class="section-head"><h2>Our History</h2><p class="small muted">A tradition of modernity</p></div><div class="history-layout"><img class="" src="../assets/images/about/history.jpg" alt="Historic Walter Knoll design" loading="lazy"><ol class="timeline"><li><span class="timeline-year">1865</span><div><h3>A leather shop in Stuttgart</h3><p>Wilhelm Knoll opens a leather business in Stuttgart.</p></div></li><li><span class="timeline-year">1925</span><div><h3>A new chapter</h3><p>Walter Knoll establishes his own furniture company.</p></div></li><li><span class="timeline-year">1949</span><div><h3>The Vostra armchair</h3><p>The upholstered Vostra becomes part of the postwar collection.</p></div></li><li><span class="timeline-year">1985</span><div><h3>A shared heritage</h3><p>Walter Knoll takes over Wilhelm Knoll and continues its collection.</p></div></li></ol></div><p class="small muted section-copy">Historical milestones: <a class="text-button" href="https://www.walterknoll.info/en/about/history" target="_blank" rel="noopener">Walter Knoll history</a>.</p></section><section class="container section" id="designers"><div class="section-head"><h2>Our Designers</h2><p class="small muted">Different perspectives. A shared language.</p></div><div class="two-column"><article class="image-card"><span class="image-frame"><img class="" src="../assets/images/index/designer-eoos.jpg" alt="EOOS" loading="lazy"></span><h3>EOOS</h3><p>A design studio with a thoughtful approach to form and experience.</p><a class="arrow-link" href="products.html">Explore the collection <span aria-hidden="true">→</span></a></article><article class="image-card"><span class="image-frame"><img class="" src="../assets/images/index/designer-foster.jpg" alt="Foster + Partners" loading="lazy"></span><h3>Foster + Partners</h3><p>Architecture and industrial design in conversation.</p><a class="arrow-link" href="products.html">Explore the collection <span aria-hidden="true">→</span></a></article></div></section><section class="newsletter-strip container section"><h2>Stay inspired.</h2><p>New designs, remarkable spaces and stories from the world of Walter Knoll.</p><button class="button" type="button" data-open="newsletterDialog">Subscribe <span aria-hidden="true">→</span></button></section>
+</main>
+<!-- shared:footer:start -->
 <footer class="site-footer">
-  <div class="footer-logo">
-    <img src="../assets/images/common/logo-black.svg" alt="Walter Knoll">
-  </div>
-
-  <div class="footer-links">
-
-    <div>
-      <p class="footer-title">Products</p>
-      <ul class="footer-list">
-        <li><a href="#">Chairs &amp; Barstools</a></li>
-        <li><a href="#">Lounge Chairs</a></li>
-        <li><a href="#">Sofas &amp; Benches</a></li>
-        <li><a href="#">Tables</a></li>
-        <li><a href="#">Executive Desks</a></li>
-        <li><a href="#">Media Integration</a></li>
-        <li><a href="#">Storage</a></li>
-        <li><a href="#">Carpets &amp; Carpet Pillows</a></li>
-        <li><a href="#">Accessories &amp; Stools</a></li>
-        <li><a href="#">Beds</a></li>
-        <li><a href="#">Exhibition pieces</a></li>
-      </ul>
+  <div class="container">
+    <a href="../index.html" class="footer-logo" aria-label="Walter Knoll — Home"><img src="../assets/images/common/logo-black.svg" alt="Walter Knoll" width="154" height="25" loading="lazy"></a>
+    <div class="footer-grid">
+      <div><h3>Products</h3><ul><li><a href="../pages/products-chairs.html">Chairs &amp; Barstools</a></li><li><a href="../pages/products.html?category=lounge-chairs">Lounge Chairs</a></li><li><a href="../pages/products.html?category=sofas-benches">Sofas &amp; Benches</a></li><li><a href="../pages/products.html?category=tables">Tables</a></li><li><a href="../pages/products.html?category=executive-desks">Executive Desks</a></li><li><a href="../pages/products.html">All Products</a></li></ul></div>
+      <div><h3>Material Library</h3><ul><li><a href="../pages/materials.html#inspiration">Inspiration</a></li><li><a href="../pages/materials-leathers.html">Leathers</a></li><li><a href="../pages/materials.html#fabrics">Fabrics</a></li><li><a href="../pages/materials.html#woods">Woods</a></li><li><a href="../pages/materials.html#stones">Stones</a></li><li><a href="../pages/materials.html#faq">FAQ</a></li></ul></div>
+      <div><h3>About us</h3><ul><li><a href="../pages/about.html#purpose">Our Purpose</a></li><li><a href="../pages/about.html#history">Our History</a></li><li><a href="../pages/about.html#designers">Our Designers</a></li><li><a href="../pages/contact.html#retailers">Showrooms</a></li><li><a href="../pages/sustainability.html">Sustainability</a></li></ul></div>
+      <div><h3>Professionals</h3><ul><li><a href="../pages/professionals.html#downloads">Downloads</a></li><li><a href="../pages/magazine.html?category=References">Projects</a></li><li><a href="../pages/professionals.html#campus">Campus of Competence</a></li><li><a href="../pages/professionals.html#tools">pCon Tools</a></li><li><a href="../pages/contact.html#contact">Contact</a></li></ul></div>
+      <div><h3>Magazine</h3><ul><li><a href="../pages/magazine.html">All Topics</a></li><li><a href="../pages/magazine.html?category=News">News</a></li><li><a href="../pages/magazine.html?category=Stories">Stories</a></li><li><a href="../pages/magazine.html?category=References">References</a></li></ul></div>
     </div>
-
-    <div>
-      <p class="footer-title">Material Library</p>
-      <ul class="footer-list">
-        <li><a href="#">Inspiration</a></li>
-        <li><a href="#">Leathers</a></li>
-        <li><a href="#">Fabrics</a></li>
-        <li><a href="#">Graded-In fabrics</a></li>
-        <li><a href="#">Woods</a></li>
-        <li><a href="#">Stones</a></li>
-        <li><a href="#">Other surfaces</a></li>
-        <li><a href="#">Materials in use</a></li>
-        <li><a href="#">FAQ</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="footer-title">About us</p>
-      <ul class="footer-list">
-        <li><a href="about.html">Our Purpose</a></li>
-        <li><a href="#">Our History</a></li>
-        <li><a href="#">Showrooms</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="footer-title">Professionals</p>
-      <ul class="footer-list">
-        <li><a href="#">Downloads</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Campus of Competence</a></li>
-        <li><a href="#">Showrooms</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">pCon Tools</a></li>
-        <li><a href="#">Content Kits</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="footer-title">Magazine</p>
-      <ul class="footer-list">
-        <li><a href="magazine.html">All Topics</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Stories</a></li>
-        <li><a href="#">References</a></li>
-        <li><a href="#">#WalterKnoll</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <a href="#">Imprint</a>
-    <a href="#">Terms &amp; Conditions</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Cookies</a>
+    <div class="footer-bottom"><p>© Walter Knoll · Frontend study</p><p>Independent educational recreation. Images and brand belong to Walter Knoll.</p><a href="https://www.walterknoll.info/en" target="_blank" rel="noopener">Visit the original ↗</a><button class="text-button" type="button" data-top>Back to top ↑</button></div>
   </div>
 </footer>
+<dialog class="content-dialog newsletter-dialog" id="newsletterDialog" aria-labelledby="newsletterTitle">
+  <div class="dialog-top"><h2 id="newsletterTitle">Stay inspired.</h2><button class="icon-button" type="button" aria-label="Close newsletter" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
+  <p>Discover design, materials and new perspectives.</p>
+  <form id="newsletterForm"><label>Email address<input type="email" name="email" autocomplete="email" required placeholder="Your email address"></label><label class="checkbox-field"><input type="checkbox" required> I understand this is a local demonstration.</label><button class="button" type="submit">Subscribe <span>→</span></button><p class="form-status" role="status"></p></form>
+  <p class="small muted">Study demo: your address is not sent or saved. Visit the original website for the official newsletter.</p>
+</dialog>
+<div class="toast" role="status" hidden></div>
 
-  <!-- 脚本：数据封装 → 公共逻辑 → 本页逻辑 -->
-  <script src="../js/api.js"></script>
-  <script src="../js/common.js"></script>
+<!-- shared:footer:end -->
+<script type="module" src="../js/common.js"></script>
 </body>
 </html>

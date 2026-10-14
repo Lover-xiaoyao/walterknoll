@@ -1,0 +1,15 @@
+{
+  "name": "walterknoll-study",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ten-page Walter Knoll frontend study in vanilla HTML, CSS and JavaScript",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "sync:components": "node scripts/sync-components.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node scripts/browser-test.mjs",
+    "capture:reference": "node scripts/capture-reference.mjs"
+  },
+  "devDependencies": { "playwright": "1.55.0" }
+}

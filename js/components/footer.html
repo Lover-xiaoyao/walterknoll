@@ -1,98 +1,20 @@
-<!-- ============================================================
-     公共组件：底部页脚
-     ------------------------------------------------------------
-     ⚠️ 本文件是「根目录版」——路径按 index.html 的位置写。
-
-     复制到 pages/ 里的 9 个页面时，要做 2 处替换：
-       1.  src="assets/...            →  src="../assets/...
-       2.  href="pages/xxx.html       →  href="xxx.html"
-       （自动生成的那 9 个骨架已经替你们改好了）
-
-     ------------------------------------------------------------
-     用法：每个页面把这一整段复制到 <body> 的最后面（在 <script> 之前）。
-     页脚 10 个页面完全一样，改的时候一次改这里 + 同步所有页面。
-     ============================================================ -->
-
 <footer class="site-footer">
-  <div class="footer-logo">
-    <img src="assets/images/common/logo-black.svg" alt="Walter Knoll">
-  </div>
-
-  <div class="footer-links">
-
-    <div>
-      <p class="footer-title">Products</p>
-      <ul class="footer-list">
-        <li><a href="#">Chairs &amp; Barstools</a></li>
-        <li><a href="#">Lounge Chairs</a></li>
-        <li><a href="#">Sofas &amp; Benches</a></li>
-        <li><a href="#">Tables</a></li>
-        <li><a href="#">Executive Desks</a></li>
-        <li><a href="#">Media Integration</a></li>
-        <li><a href="#">Storage</a></li>
-        <li><a href="#">Carpets &amp; Carpet Pillows</a></li>
-        <li><a href="#">Accessories &amp; Stools</a></li>
-        <li><a href="#">Beds</a></li>
-        <li><a href="#">Exhibition pieces</a></li>
-      </ul>
+  <div class="container">
+    <a href="{{root}}index.html" class="footer-logo" aria-label="Walter Knoll — Home"><img src="{{root}}assets/images/common/logo-black.svg" alt="Walter Knoll" width="154" height="25" loading="lazy"></a>
+    <div class="footer-grid">
+      <div><h3>Products</h3><ul><li><a href="{{root}}pages/products-chairs.html">Chairs &amp; Barstools</a></li><li><a href="{{root}}pages/products.html?category=lounge-chairs">Lounge Chairs</a></li><li><a href="{{root}}pages/products.html?category=sofas-benches">Sofas &amp; Benches</a></li><li><a href="{{root}}pages/products.html?category=tables">Tables</a></li><li><a href="{{root}}pages/products.html?category=executive-desks">Executive Desks</a></li><li><a href="{{root}}pages/products.html">All Products</a></li></ul></div>
+      <div><h3>Material Library</h3><ul><li><a href="{{root}}pages/materials.html#inspiration">Inspiration</a></li><li><a href="{{root}}pages/materials-leathers.html">Leathers</a></li><li><a href="{{root}}pages/materials.html#fabrics">Fabrics</a></li><li><a href="{{root}}pages/materials.html#woods">Woods</a></li><li><a href="{{root}}pages/materials.html#stones">Stones</a></li><li><a href="{{root}}pages/materials.html#faq">FAQ</a></li></ul></div>
+      <div><h3>About us</h3><ul><li><a href="{{root}}pages/about.html#purpose">Our Purpose</a></li><li><a href="{{root}}pages/about.html#history">Our History</a></li><li><a href="{{root}}pages/about.html#designers">Our Designers</a></li><li><a href="{{root}}pages/contact.html#retailers">Showrooms</a></li><li><a href="{{root}}pages/sustainability.html">Sustainability</a></li></ul></div>
+      <div><h3>Professionals</h3><ul><li><a href="{{root}}pages/professionals.html#downloads">Downloads</a></li><li><a href="{{root}}pages/magazine.html?category=References">Projects</a></li><li><a href="{{root}}pages/professionals.html#campus">Campus of Competence</a></li><li><a href="{{root}}pages/professionals.html#tools">pCon Tools</a></li><li><a href="{{root}}pages/contact.html#contact">Contact</a></li></ul></div>
+      <div><h3>Magazine</h3><ul><li><a href="{{root}}pages/magazine.html">All Topics</a></li><li><a href="{{root}}pages/magazine.html?category=News">News</a></li><li><a href="{{root}}pages/magazine.html?category=Stories">Stories</a></li><li><a href="{{root}}pages/magazine.html?category=References">References</a></li></ul></div>
     </div>
-
-    <div>
-      <p class="footer-title">Material Library</p>
-      <ul class="footer-list">
-        <li><a href="#">Inspiration</a></li>
-        <li><a href="#">Leathers</a></li>
-        <li><a href="#">Fabrics</a></li>
-        <li><a href="#">Graded-In fabrics</a></li>
-        <li><a href="#">Woods</a></li>
-        <li><a href="#">Stones</a></li>
-        <li><a href="#">Other surfaces</a></li>
-        <li><a href="#">Materials in use</a></li>
-        <li><a href="#">FAQ</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="footer-title">About us</p>
-      <ul class="footer-list">
-        <li><a href="pages/about.html">Our Purpose</a></li>
-        <li><a href="#">Our History</a></li>
-        <li><a href="#">Showrooms</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="footer-title">Professionals</p>
-      <ul class="footer-list">
-        <li><a href="#">Downloads</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Campus of Competence</a></li>
-        <li><a href="#">Showrooms</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
-        <li><a href="#">pCon Tools</a></li>
-        <li><a href="#">Content Kits</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="footer-title">Magazine</p>
-      <ul class="footer-list">
-        <li><a href="pages/magazine.html">All Topics</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Stories</a></li>
-        <li><a href="#">References</a></li>
-        <li><a href="#">#WalterKnoll</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <a href="#">Imprint</a>
-    <a href="#">Terms &amp; Conditions</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Cookies</a>
+    <div class="footer-bottom"><p>© Walter Knoll · Frontend study</p><p>Independent educational recreation. Images and brand belong to Walter Knoll.</p><a href="https://www.walterknoll.info/en" target="_blank" rel="noopener">Visit the original ↗</a><button class="text-button" type="button" data-top>Back to top ↑</button></div>
   </div>
 </footer>
+<dialog class="content-dialog newsletter-dialog" id="newsletterDialog" aria-labelledby="newsletterTitle">
+  <div class="dialog-top"><h2 id="newsletterTitle">Stay inspired.</h2><button class="icon-button" type="button" aria-label="Close newsletter" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
+  <p>Discover design, materials and new perspectives.</p>
+  <form id="newsletterForm"><label>Email address<input type="email" name="email" autocomplete="email" required placeholder="Your email address"></label><label class="checkbox-field"><input type="checkbox" required> I understand this is a local demonstration.</label><button class="button" type="submit">Subscribe <span>→</span></button><p class="form-status" role="status"></p></form>
+  <p class="small muted">Study demo: your address is not sent or saved. Visit the original website for the official newsletter.</p>
+</dialog>
+<div class="toast" role="status" hidden></div>
