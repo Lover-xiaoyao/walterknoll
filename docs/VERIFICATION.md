@@ -68,3 +68,15 @@ GitHub Actions 已配置相同检查流程。远端 CI 状态另看仓库 Action
 改动：`css/components.css` 里把该规则换成 `[aria-disabled=true], [aria-disabled=true] * { pointer-events: none }`——鼠标指针保持页面默认、hover 不再触发任何颜色变化、点击落到下层元素因此不会跳转。`href="#"` 与 `aria-disabled="true"` 保留，`js/common.js` 的 `preventDefault` 守卫也保留（键盘回车等情况）。
 
 验证：`npm run check` **PASS**；`npm test` **28/28 通过**。新增断言 `dead controls show no cursor or hover feedback`：检查计算出的 `pointer-events` 为 `none`、`document.elementFromPoint` 在卡片中心命中的不是死链（光标因此不是 `not-allowed`）、以及鼠标移上去之后文字颜色不变。
+
+## 按验收要求改成"内容写死的静态页"（2026-10-15 追加）
+
+范围变化：验收要求明确「所有内容必须写死在 HTML」「禁止 AJAX/fetch」「用 `<a>` 实现本地页面互相跳转（图片包裹跳转）」「hover 上浮、阴影加深、图片变暗、文字变色」，因此这一轮推翻了上两轮的两条做法——正文死链恢复成真实的本地页跳转，被删掉的阴影与位移按新要求补回。
+
+删除：`assets/data/catalog.json`（59 件产品、9 篇文章、15 种皮革、6 家门店、6 张轮播图的数据源）、`js/api.js`、`js/pages/products.js`、`js/pages/index.js`、`js/pages/contact.js`、`js/pages/materials.js`、`js/pages/materials-leathers.js` 的残余引用、`assets/downloads/` 三个 txt、以及 23 张已无人引用的图片（约 5.2MB，含 5 张轮播图和 18 张孤图）；`js/` 目录现在只剩 `common.js` 与 `pages/magazine.js`。
+
+改成写死：产品总览 59 件、座椅子页 35 件、杂志 9 篇（按 News / Stories / References 分组，Tab 只切换 `hidden`）、门店 6 家、材料 9 张卡、皮革 15 个色卡、页脚 26 条栏目链接与页头 3 条工具链接全部指向真实的本地页面。
+
+改成惰性：三个下载按钮去掉 `href` 与 `download`、六个门店的 Google Maps 外链换成 `<span>`、筛选栏/分页/搜索框/联系表单保持外观但点不动（`aria-disabled="true"` + `pointer-events: none`）；`js/pages/magazine.js` 只切换显示，不加载任何数据。
+
+验证：`npm run check` **PASS**（10 pages, 838 local links/resources, shared components, anchors, inert downloads and map links, no page fetch, and JavaScript syntax）；`npm test` **29/29 通过**。新断言逐条对应验收要求：`the lists are written into the HTML, not fetched`（用 `javaScriptEnabled: false` 的浏览器上下文打开产品页/座椅页/杂志页，断言 59 / 35 / 9 张卡片仍在）、`filters, pagination and search change nothing`、`magazine tabs only switch what is visible`（点击 News 后 DOM 里仍是 9 篇、可见 3 篇）、`cards lift and deepen their shadow on hover`（比较 hover 前后的 `transform` 与 `box-shadow`）、`downloads and map links stay inert`、`every page link points at one of the ten pages`。未做（验收里属于可选项）：首页大图轮播。未验证：GitHub Actions 远端结果与 Safari/Firefox。

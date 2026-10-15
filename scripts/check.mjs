@@ -75,18 +75,34 @@ for (const file of files) {
     }
   }
 }
-const catalog = JSON.parse(
-  await readFile(new URL("assets/data/catalog.json", root), "utf8"),
-);
-for (const collection of Object.values(catalog))
-  for (const item of collection)
-    if (item.image) {
-      try {
-        await access(new URL(item.image, root));
-      } catch {
-        errors.push(`Catalog: missing ${item.image}`);
-      }
+// The ten pages write their content straight into the HTML: no data layer,
+// no network calls, no storage.
+async function staticOnly(directory) {
+  for (const entry of await readdir(new URL(directory, root), {
+    withFileTypes: true,
+  })) {
+    const file = directory + entry.name;
+    if (entry.isDirectory()) await staticOnly(file + "/");
+    else if (file.endsWith(".js")) {
+      const source = await readFile(new URL(file, root), "utf8");
+      if (/\bfetch\(|XMLHttpRequest|localStorage|sessionStorage/.test(source))
+        errors.push(`${file}: a page script may not reach the network or storage`);
     }
+  }
+}
+await staticOnly("js/");
+for (const gone of ["assets/data", "assets/downloads"])
+  try {
+    await access(new URL(gone, root));
+    errors.push(`${gone} should be gone: the content lives in the HTML`);
+  } catch {}
+for (const file of files) {
+  const content = await readFile(new URL(file, root), "utf8");
+  if (/\sdownload(?=[\s=>])/.test(content))
+    errors.push(`${file}: a download link must stay inert`);
+  if (/maps\.google/.test(content))
+    errors.push(`${file}: a map link must stay inert`);
+}
 async function javascript(directory) {
   for (const entry of await readdir(new URL(directory, root), {
     withFileTypes: true,
@@ -113,6 +129,6 @@ if (errors.length) {
   process.exitCode = 1;
 } else {
   console.log(
-    `PASS: ${files.length} pages, ${links} local links/resources, all catalog images, shared components, anchors and JavaScript syntax.`,
+    `PASS: ${files.length} pages, ${links} local links/resources, shared components, anchors, inert downloads and map links, no page fetch, and JavaScript syntax.`,
   );
 }

@@ -1,19 +1,28 @@
-// 展示用静态 UI 模板：杂志页只渲染完整列表。
-// 分类 Tab 切换和文章弹窗都不再实现，Tab 只作为静态的界面元素。
-import { getCatalog, asset, escapeHtml as esc } from "../api.js";
-
+// Magazine 页的 Tab：只做视觉切换。
+// 九篇文章写死在 HTML 里，这里不加载、不请求、不读写任何数据。
+const rows = [...document.querySelectorAll(".article-row")];
 const count = document.querySelector("#articleCount");
-const list = document.querySelector("#articleList");
+const tabs = [...document.querySelectorAll(".tabs button")];
 
-try {
-  const { articles } = await getCatalog();
-  count.textContent = `${articles.length} stories`;
-  list.innerHTML = articles
-    .map(
-      (article) =>
-        `<article class="article-row"><span class="article-image"><img src="${asset(article.image)}" alt="${esc(article.title)}" loading="lazy" width="1000" height="667"></span><div class="article-copy"><p class="eyebrow">${esc(article.category)}</p><h2>${esc(article.title)}</h2><p class="muted">Architecture, spaces and the people who bring them to life.</p></div></article>`,
-    )
-    .join("");
-} catch (error) {
-  count.textContent = error.message;
+function show(tab) {
+  const topic = tab.textContent.trim();
+  let visible = 0;
+  for (const row of rows) {
+    const category = row.querySelector(".eyebrow").textContent.trim();
+    const match = topic === "All Topics" || topic === category;
+    row.hidden = !match;
+    if (match) visible += 1;
+  }
+  count.textContent = `${visible} ${visible === 1 ? "story" : "stories"}`;
+}
+
+for (const tab of tabs) {
+  tab.addEventListener("click", () => {
+    for (const other of tabs) {
+      const selected = other === tab;
+      other.setAttribute("aria-selected", String(selected));
+      other.tabIndex = selected ? 0 : -1;
+    }
+    show(tab);
+  });
 }

@@ -55,15 +55,13 @@ const routes = Object.fromEntries(
     name === "index" ? "/index.html" : `/pages/${name}.html`,
   ]),
 );
+const pageNames = new Set(files.map((name) => `${name}.html`));
 let page;
 const errors = [];
 const badRequests = [];
 async function open(name) {
   const response = await page.goto(base + routes[name]);
   assert.equal(response.status(), 200);
-  if (name.startsWith("products"))
-    await page.locator(".product-card").first().waitFor();
-  if (name === "magazine") await page.locator(".article-row").first().waitFor();
 }
 async function check(name, action) {
   const before = errors.length;
@@ -151,67 +149,90 @@ try {
       .click();
     assert.ok(page.url().includes("materials.html"));
   });
-  await check("only the drawer dialog is left", async () => {
+  await check("every page link points at one of the ten pages", async () => {
     for (const name of files) {
       await open(name);
-      const dialogs = await page.evaluate(() =>
-        [...document.querySelectorAll("dialog")].map((dialog) => dialog.id),
+      const targets = await page.evaluate(() =>
+        [...document.querySelectorAll("a[href]")]
+          .map((link) => link.getAttribute("href"))
+          .filter((href) => href && !href.startsWith("#") && !/^https?:|^tel:|^mailto:/.test(href))
+          .map((href) => href.split(/[?#]/)[0].split("/").pop()),
       );
-      assert.deepEqual(dialogs, ["menuDialog"], name);
+      const strangers = [...new Set(targets)].filter(
+        (target) => !pageNames.has(target),
+      );
+      assert.deepEqual(strangers, [], `${name} links outside the ten pages`);
     }
   });
-  await check("no interaction hooks remain in the pages", async () => {
-    for (const name of files) {
-      await open(name);
-      const hooks = await page.evaluate(() => ({
-        wishlist: document.querySelectorAll(
-          "[data-favorite], [data-product-open]",
-        ).length,
-        articles: document.querySelectorAll("[data-article]").length,
-        materials: document.querySelectorAll(
-          "[data-material], [data-swatch]",
-        ).length,
-        filters: document.querySelectorAll("[data-category], [data-topic]")
-          .length,
-        carousel: document.querySelectorAll(
-          "[data-slide], [data-slide-pause], [data-slide-next], [data-slide-number]",
-        ).length,
-        backToTop: document.querySelectorAll("[data-top]").length,
-        drawer: document.querySelectorAll('[data-open="menuDialog"]').length,
-      }));
-      assert.deepEqual(
-        hooks,
-        {
-          wishlist: 0,
-          articles: 0,
-          materials: 0,
-          filters: 0,
-          carousel: 0,
-          backToTop: 0,
-          drawer: 1,
-        },
-        name,
-      );
-    }
+  await check("the lists are written into the HTML, not fetched", async () => {
+    const plain = await browser.newContext({ javaScriptEnabled: false });
+    const bare = await plain.newPage();
+    await bare.goto(`${base}/pages/products.html`);
+    assert.equal(await bare.locator(".product-card").count(), 59);
+    await bare.goto(`${base}/pages/products-chairs.html`);
+    assert.equal(await bare.locator(".product-card").count(), 35);
+    await bare.goto(`${base}/pages/magazine.html`);
+    assert.equal(await bare.locator(".article-row").count(), 9);
+    await bare.goto(`${base}/index.html`);
+    assert.ok((await bare.locator(".image-card").count()) > 0);
+    await plain.close();
   });
-  await check("nothing outside the main navigation navigates", async () => {
+  await check("filters, pagination and search change nothing", async () => {
+    await open("products");
+    const cards = await page.locator(".product-card").count();
+    for (const selector of [".chips button", "#loadMore", "#resetFilters"]) {
+      const control = page.locator(selector).first();
+      if (await control.count())
+        await control.click({ force: true }).catch(() => {});
+    }
+    await page.locator("#productSearch").fill("zzz").catch(() => {});
+    assert.equal(await page.locator(".product-card").count(), cards);
+    await open("products-chairs");
+    const chairs = await page.locator(".product-card").count();
+    for (const button of await page.locator(".pagination button").all())
+      await button.click({ force: true }).catch(() => {});
+    assert.equal(await page.locator(".product-card").count(), chairs);
+  });
+  await check("magazine tabs only switch what is visible", async () => {
+    await open("magazine");
+    assert.equal(await page.locator(".article-row").count(), 9);
+    await page
+      .getByRole("tab", { name: "News", exact: true })
+      .click();
+    assert.equal(await page.locator(".article-row").count(), 9);
+    assert.equal(await page.locator(".article-row:visible").count(), 3);
+    assert.match(await page.locator("#articleCount").innerText(), /3 stories/);
+    await page.getByRole("tab", { name: "All Topics", exact: true }).click();
+    assert.equal(await page.locator(".article-row:visible").count(), 9);
+  });
+  await check("cards lift and deepen their shadow on hover", async () => {
+    await open("products");
+    const card = page.locator(".product-card").first();
+    const resting = await card.evaluate((el) => {
+      const style = getComputedStyle(el);
+      return { transform: style.transform, shadow: style.boxShadow };
+    });
+    await card.hover();
+    const hovered = await card.evaluate((el) => {
+      const style = getComputedStyle(el);
+      return { transform: style.transform, shadow: style.boxShadow };
+    });
+    assert.notEqual(hovered.transform, resting.transform);
+    assert.notEqual(hovered.shadow, resting.shadow);
+    assert.notEqual(hovered.shadow, "none");
+  });
+  await check("inert controls still do nothing", async () => {
     for (const name of files) {
       await open(name);
       const targets = await page
-        .locator(
-          'main [aria-disabled="true"], .site-footer a[aria-disabled="true"], ' +
-            '.header-tools [aria-disabled="true"]',
-        )
+        .locator('main [aria-disabled="true"], .site-footer [aria-disabled="true"]')
         .all();
       let clicked = 0;
       for (const target of targets) {
-        if (clicked >= 12) break;
-        // hidden controls are skipped: the click would only time out
+        if (clicked >= 10) break;
         if (!(await target.isVisible().catch(() => false))) continue;
         clicked++;
-        await target
-          .scrollIntoViewIfNeeded({ timeout: 2000 })
-          .catch(() => {});
+        await target.scrollIntoViewIfNeeded({ timeout: 2000 }).catch(() => {});
         const before = await page.evaluate(() => ({
           url: location.href,
           y: scrollY,
@@ -227,68 +248,24 @@ try {
       assert.ok(clicked > 0, `${name} had no inert control to click`);
     }
   });
-  await check("dead controls show no cursor or hover feedback", async () => {
-    await open("index");
-    assert.equal(
-      await page.evaluate(
-        () =>
-          getComputedStyle(document.querySelector('[aria-disabled="true"]'))
-            .pointerEvents,
-      ),
-      "none",
-    );
-    const card = page.locator('#main a[aria-disabled="true"]').first();
-    const box = await card.boundingBox();
-    const point = [box.x + box.width / 2, box.y + box.height / 2];
-    const colour = await card.evaluate((el) => getComputedStyle(el).color);
-    await page.mouse.move(point[0], point[1]);
-    const hit = await page.evaluate(
-      ([x, y]) => {
-        const el = document.elementFromPoint(x, y);
-        return {
-          inside: !!el.closest('[aria-disabled="true"]'),
-          cursor: getComputedStyle(el).cursor,
-        };
-      },
-      point,
-    );
-    assert.equal(hit.inside, false, "dead control is still hit-testable");
-    assert.notEqual(hit.cursor, "not-allowed");
-    assert.equal(
-      await card.evaluate((el) => getComputedStyle(el).color),
-      colour,
-      "dead control still changes colour on hover",
-    );
-  });
-  await check("every remaining link is navigation or an external source", async () => {
+  await check("downloads and map links stay inert", async () => {
     for (const name of files) {
       await open(name);
-      const offenders = await page.evaluate(() =>
-        [...document.querySelectorAll("a[href]")]
-          .filter((link) => {
-            const href = link.getAttribute("href");
-            if (href.startsWith("#")) return false;
-            if (/^https?:/.test(href)) return false;
-            // only page targets matter here; downloads and assets are fine
-            if (!/\.html(?:[?#]|$)/.test(href)) return false;
-            return !link.closest(
-              ".primary-nav, .drawer-nav, .breadcrumbs, .logo, .footer-logo, " +
-                ".skip-link",
-            );
-          })
-          .map((link) => link.getAttribute("href")),
-      );
-      assert.deepEqual(offenders, [], name);
+      const leftovers = await page.evaluate(() => ({
+        downloads: document.querySelectorAll("a[download]").length,
+        maps: [...document.querySelectorAll("a[href]")].filter((link) =>
+          link.getAttribute("href").includes("maps.google"),
+        ).length,
+        storage: (() => {
+          try {
+            return Object.keys(localStorage).length;
+          } catch {
+            return 0;
+          }
+        })(),
+      }));
+      assert.deepEqual(leftovers, { downloads: 0, maps: 0, storage: 0 }, name);
     }
-  });
-  await check("the lists stay complete without pagination", async () => {
-    await open("products");
-    assert.equal(await page.locator(".product-card").count(), 12);
-    await open("products-chairs");
-    assert.equal(await page.locator(".product-card").count(), 9);
-    assert.match(await page.locator("#pageSummary").innerText(), /Page 1 of 4/);
-    await open("magazine");
-    assert.equal(await page.locator(".article-row").count(), 9);
   });
 } finally {
   report.browserErrors = errors;

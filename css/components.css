@@ -70,11 +70,54 @@
     text-underline-offset: 4px
 }
 
-/* The template is display-only: dead controls are completely inert —
-   no pointer cursor, no hover change, no click. */
+/* Dead controls keep their look but are completely inert: no cursor change,
+   no hover feedback, no click. */
 [aria-disabled=true],
 [aria-disabled=true] * {
     pointer-events: none
+}
+
+/* Cards: rounded corners plus hover feedback — lift, deeper shadow, darker
+   image and a text colour change. */
+.button,
+.image-card,
+.image-frame,
+.product-card,
+.article-row,
+.service-card,
+.store-card,
+.material-card {
+    border-radius: 4px
+}
+
+.image-card,
+.image-frame,
+.product-card,
+.article-row,
+.service-card,
+.store-card,
+.material-card {
+    transition: transform .2s, box-shadow .2s
+}
+
+.image-card:hover,
+.image-frame:hover,
+.product-card:hover,
+.article-row:hover,
+.service-card:hover,
+.store-card:hover,
+.material-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px #0000001f
+}
+
+.image-card:hover img,
+.image-frame:hover img,
+.product-card:hover img,
+.article-row:hover img,
+.service-card:hover img,
+.material-card:hover img {
+    filter: brightness(.94)
 }
 
 .breadcrumbs {

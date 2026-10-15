@@ -28,17 +28,15 @@ npm run dev
 | C    | `pages/materials.html`          | 九个材料入口、悬停效果、材料预览、FAQ                         |
 | C    | `pages/materials-leathers.html` | Elen 大图、材料说明、15 款真实纹理色卡                        |
 | D    | `pages/magazine.html`           | All Topics / News / Stories / References、文章列表与预览      |
-| D    | `pages/professionals.html`      | 八项服务、可下载的项目参考文件、官方资源入口                  |
+| D    | `pages/professionals.html`      | 八项服务、下载按钮（只保留样式）、官方资源入口                |
 | E    | `pages/sustainability.html`     | 来源明确的统计、图文、原则与 Evo Concept                      |
-| E    | `pages/contact.html`            | 六个门店、城市搜索、地图链接、联系表单演示                    |
+| E    | `pages/contact.html`            | 六个门店、门店搜索框、联系表单（都只画外观）                  |
 
-这是一个**展示用的静态 UI 模板**：十页只用来呈现界面，不做交互。全站唯一的跳转是顶部主导航（Products、Material Library、Magazine、Designers、Professionals、About us、Sustainability，手机上是同一个导航的抽屉）和 logo；正文的卡片、图块、按钮、列表项一律是空链接（`href="#"` + `aria-disabled="true"`），鼠标指针不变、hover 不变色、点了不跳页也不滚顶。筛选、分页、Tab、色卡、表单等控件同样只是界面元素：`aria-disabled="true"` 表示"点了不会有反应"，并由 `pointer-events: none` 彻底惰性化。`js/common.js` 只做三件事：给当前主导航加 `aria-current`、开合手机导航抽屉、拦住死链的默认跳转；产品页和杂志页各有一个脚本，只负责把列表渲染出来。
+这是一个**纯前端静态页面练习**：十页只呈现界面，内容全部写死在 HTML 里，页面之间用 `<a>` 互相跳转（图片也包在 `<a>` 里），不请求任何接口、不读写任何存储。筛选栏、分页、Tab、色卡、表单、下载按钮都只画外观——点击不会筛选、不会翻页、不会下载、不会提交。带逻辑的脚本只剩三件事：手机导航抽屉的开合、杂志页 Tab 的显示切换、以及拦住死链默认跳转的守卫。
 
-**十页范围**：全站只有上表十个 HTML 页面（`index.html` 与 `pages/` 下九个；`js/components/*.html` 是公共片段，不是页面）。列表内容在页面里完整呈现，不靠翻页或加载更多隐藏：产品总览 12 条、座椅页 9 条（分页条只作为界面元素）、杂志 9 条、门店 6 家。
+**十页范围**：全站只有上表十个 HTML 页面（`index.html` 与 `pages/` 下九个；`js/components/*.html` 是公共片段，不是页面）。因为分页按钮不会加载新内容，页面上把内容一次写完：产品总览 59 件、座椅子页 35 件、杂志 9 篇、门店 6 家。**视觉与交互范围**：全站零依赖，只有原生 HTML/CSS/JS——没有动画库、没有 `@keyframes`、没有渐变、没有毛玻璃，也没有视差或 3D 翻转。卡片 hover 时上浮 4px、阴影加深、图片轻微变暗、标题变色，全部由 CSS 直接实现（`.2s` 过渡）。选择器只用标签、类、后代/子代与属性选择器，不使用 `:not()` 和 `:has()`。CSS 变量只有 `:root` 里一层平铺的 11 个（配色、字体、间距）。
 
-**视觉与交互范围**：全站零依赖，只有原生 HTML/CSS/JS——没有动画库、没有 `@keyframes`、没有渐变、阴影、毛玻璃，也没有视差、3D 翻转或鼠标跟随。hover 只做颜色/背景变化加 `.2s` 过渡；箭头不再位移、卡片图片不再悬停放大。选择器只用标签、类、后代/子代，以及状态需要的属性选择器（`[aria-current]`、`[aria-disabled]`），不使用 `:not()` 和 `:has()`。CSS 变量只有 `:root` 里一层平铺的 11 个（配色、字体、间距），没有变量套变量。
-
-产品索引有 60 条分类记录（59 个不同产品，Management-X 跨分类）；总览页把前 12 条渲染成卡片，十个目前官网返回的产品分类作为界面图块展示。杂志保留九篇有官方来源的文章列表。完整产品规格和文章正文在原官网查看。
+产品索引共 59 件不同产品（原目录 60 条记录，Management-X 跨分类），全部写在产品总览页里；座椅类产品的卡片另有一份完整列表在座椅子页，两页互相链接。杂志保留九篇有官方来源的文章，按 News / Stories / References 分标签显示。完整产品规格和文章正文在原官网查看。
 
 ## 文件组织
 
@@ -51,11 +49,8 @@ css/components.css         卡片、筛选、表单、弹窗
 css/pages/                 每页专属样式
 js/components/             公共导航与页脚的源片段
 js/common.js               当前导航高亮、手机导航抽屉、死链不跳转
-js/api.js                  本地数据读取与卡片输出
-js/pages/                  列表渲染（只渲染，无交互）
-assets/data/catalog.json   产品、文章、材料、门店、轮播索引
+js/pages/magazine.js       杂志页 Tab 的显示切换（不加载数据）
 assets/images/             本地图片，按模块分类
-assets/downloads/          可下载的教学参考文件
 scripts/                   启动、公共片段同步、检查、截图
 ```
 
@@ -75,8 +70,8 @@ npx playwright install chromium
 npm test
 ```
 
-- `check`：十页数量、共享片段一致性（比较标记内容，忽略缩进与换行差异）、内部链接、锚点、图片与 JavaScript 语法。
-- `test`：自动启动独立测试服务器，检查十页桌面/手机布局、主导航、内容完整性和"除主导航外不得跳转"；完成后自动停止测试服务器。
+- `check`：十页数量、共享片段一致性（比较标记内容，忽略缩进与换行差异）、内部链接与锚点、图片与 JavaScript 语法，外加三条范围断言——页面脚本不许 `fetch`/存储、`assets/data` 与 `assets/downloads` 必须已删除、页面里不许有可下载链接和地图外链。
+- `test`：自动启动独立测试服务器，用 Chromium 实测十页桌面/手机布局、主导航、内容确实写在 HTML 里（关掉 JS 也必须有卡片）、筛选与分页与搜索点击后数量不变、杂志 Tab 只切换显示、卡片 hover 有上浮与阴影、失效控件点不动；完成后自动停止测试服务器。
 - 报告与完整截图在 `artifacts/verification/`，不把临时测试产物加入 Git。
 - `npm run capture:reference`：采集指定官网页面截图与字体/尺寸观察，保存到 `artifacts/reference/`。
 - GitHub Actions 自动执行检查与浏览器测试，并上传测试报告。
